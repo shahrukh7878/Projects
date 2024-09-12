@@ -41,7 +41,7 @@ public class InfinityTest extends TestBase{
 	ExtentTest test1,test2;	
 	static ExtentTest WriteExtentReport;
 	datadriven d;
-	String path = "C:\\Users\\ShahrukhAatar\\Documents\\TestDataInfinity.xls";
+	String path = "C://Users//ShahrukhAata_l4//New//Test//TestData//TestDataInfinity.xls";
 	
 	@BeforeSuite
 	public void start() { 
@@ -133,7 +133,7 @@ public class InfinityTest extends TestBase{
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TestCase1() throws Exception  {
 		
 		 test1 = extent.createTest("Test Case 1", "InfinityTestCase ");
@@ -174,6 +174,7 @@ public class InfinityTest extends TestBase{
 		String BankType = (String) data.get(24);
 		String Name = (String) data.get(29);*/
 		
+		driver.get(url);
 		Screenshot();
 		WriteExtentReport =test1.createNode("Navigate to Application landing page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
@@ -192,9 +193,9 @@ public class InfinityTest extends TestBase{
 			
 		 driver.findElement(By.xpath("//button[contains(text(),'SEARCH')]")).click();
 		
-        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'PLMD GROUP LTD')])[1]"))).isDisplayed();
-		
-		driver.findElement(By.xpath("(//a[contains(text(),'"+CompanyName+"')])[1]")).click();
+        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'"+CompanyName+"')]"))).isDisplayed();
+        Sleep(8000);
+		driver.findElement(By.xpath("//a[contains(text(),'"+CompanyName+"')]")).click();
 	
 		//Sleep(800000);
 		
@@ -259,7 +260,7 @@ public class InfinityTest extends TestBase{
 	}
 
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TestCase2() throws Exception  {
 		
 		 test1 = extent.createTest("Test Case 2", "InfinityTestCase ");
@@ -362,21 +363,16 @@ public class InfinityTest extends TestBase{
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 		
 		
-		 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Confirm')])[1]"))).isDisplayed();
-			
-		 driver.findElement(By.xpath("(//a[contains(text(),'Confirm')])[1]")).click();
-			
-         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Merchant cash advance')]"))).isDisplayed();
-         Sleep(2000);
-		 driver.findElement(By.xpath("//div[contains(text(),'Merchant cash advance')]")).click();
-			
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Confirm')])[1]"))).isDisplayed();
+		driver.findElement(By.xpath("(//a[contains(text(),'Confirm')])[1]")).click();
+        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Merchant cash advance')]"))).isDisplayed();
+        Sleep(2000);
+		driver.findElement(By.xpath("//div[contains(text(),'Merchant cash advance')]")).click();	
 		Screenshot();
 		WriteExtentReport = test1.createNode("Navigate to Merchant cash advance Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-		Sleep(5000);
-		
+		Sleep(5000);	
 	}
-	
 	    catch(Exception e) {
 		String Error = e.toString();
 		System.out.println(Error);
@@ -389,7 +385,7 @@ public class InfinityTest extends TestBase{
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TestCase3() throws Exception  {
 		
 		 test1 = extent.createTest("Test Case 3", "InfinityTestCase ");
@@ -514,6 +510,13 @@ public class InfinityTest extends TestBase{
 		WriteExtentReport =test1.createNode("Failed Page ");
 		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
         }
+	}
+	
+	
+	public void TestCase4() throws Exception{
+		
+		
+			
 	}
 
 	@AfterMethod

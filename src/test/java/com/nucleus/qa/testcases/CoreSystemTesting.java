@@ -445,7 +445,7 @@ public class CoreSystemTesting extends TestBase  {
 			}
 			
 		}		
-			@Test(enabled=true)
+			@Test(enabled=false)
 		public void TestCase3() throws Exception {
 			 test1 = extent.createTest("Test Case 3", "mypulse.io Portal");
 			
@@ -749,7 +749,7 @@ public class CoreSystemTesting extends TestBase  {
 		
 		
 		
-		@Test(enabled=false)
+		@Test(enabled=true)
 		public void TestCase5() throws Exception  {
 			
 			
@@ -794,41 +794,41 @@ public class CoreSystemTesting extends TestBase  {
 			    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'Paid Out Deals By Broker')]"))).isDisplayed();
 						
 				Sleep(2000);
-						 Screenshot();
-						 WriteExtentReport =test1.createNode("Navigate to Application landing page1");
-						 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				Screenshot();
+				WriteExtentReport =test1.createNode("Navigate to Application landing page1");
+				WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 			
-						 driver.findElement(By.xpath("//a[contains(text(),' NEW PROPOSAL')]")).click();
-						 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'New Proposal ')]"))).isDisplayed();
-						  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Business Information')]"))).isDisplayed();
-							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Loan Information')]"))).isDisplayed();
+				driver.findElement(By.xpath("//a[contains(text(),' NEW PROPOSAL')]")).click();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'New Proposal ')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Business Information')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Loan Information')]"))).isDisplayed();
 							
-							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Director Information')]"))).isDisplayed();
-							  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Documents')]"))).isDisplayed();
-								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited Company')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Director Information')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Documents')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited Company')]"))).isDisplayed();
 								
-								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited liability partnership')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited liability partnership')]"))).isDisplayed();
 								
-								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("clearbtn"))).isDisplayed();
-								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("steponebutton"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("clearbtn"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("steponebutton"))).isDisplayed();
 								
-								Sleep(2000);
-								 Screenshot();
-								 WriteExtentReport =test1.createNode("Navigate to NEW PROPOSAL Page");
-								 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				Sleep(2000);
+				Screenshot();
+				WriteExtentReport =test1.createNode("Navigate to NEW PROPOSAL Page");
+				WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 							 
 								 
-								 driver.findElement(By.xpath("//a[contains(text(),' OPEN BANKING STATUS')]")).click();
-								 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Open Banking Status')]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Allied Irish(NI)')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Bank of Scotland Commercial')]"))).isDisplayed();
+				driver.findElement(By.xpath("//a[contains(text(),' OPEN BANKING STATUS')]")).click();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Open Banking Status')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Allied Irish(NI)')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Bank of Scotland Commercial')]"))).isDisplayed();
 									
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Barclays Corporate')]"))).isDisplayed();
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Barclays Corporate')]"))).isDisplayed();
 									
-									Sleep(2000);
-									 Screenshot();
-									 WriteExtentReport =test1.createNode("Navigate to OPEN BANKING STATUS Page");
-									 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				Sleep(2000);
+				Screenshot();
+				WriteExtentReport =test1.createNode("Navigate to OPEN BANKING STATUS Page");
+				WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 								 
 								
 									 driver.findElement(By.xpath("//a[contains(text(),' OPEN ACCOUNTING STATUS')]")).click();

@@ -6,13 +6,9 @@
       <class name="com.nucleus.qa.testcases.LoginPageTest">
 		  <methods>
 			  <include name="TestCase2">
-				  
 			  </include>
-			  
-			  <exclude name="TestCase1">
-				  
+			  <exclude name="TestCase1">  
 			  </exclude>
-			  
 		  </methods>
       </class>
     </classes>
