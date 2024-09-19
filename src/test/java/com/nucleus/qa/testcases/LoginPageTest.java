@@ -119,6 +119,11 @@ public class LoginPageTest extends TestBase {
 	InfinityHomePage  InfinityHome;
 	InfinityNewProposalPage InfinityNewProposal;	
 	datadriven d;
+	
+	
+	
+	
+	
 	DataFormatter formatter=new DataFormatter();
 	String sheetName = "Credentilas";
 	ExtentTest logger;
@@ -340,7 +345,6 @@ public class LoginPageTest extends TestBase {
 		
 		driver.findElement(By.xpath("//input[@id='Login']")).click();
 		Sleep(3000);
-		
 		try {
 		System.out.println("777777777777777");
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[@class='uiImage'])[1]"))).isDisplayed();
@@ -349,10 +353,7 @@ public class LoginPageTest extends TestBase {
 		System.out.println("777777777777777");
 		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]"))).isDisplayed();
 		driver.findElement(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]")).click();
-		
 	     }
-		
-		
 		catch(Exception e) {
 			
 		}

@@ -9,16 +9,17 @@ public class Test {
 
 	public static void main(String[] args) throws EmailException {
 		Email email = new SimpleEmail();
-		email.setHostName("smtp.googlemail.com");
-		email.setSmtpPort(587);
-		email.setAuthenticator(new DefaultAuthenticator("shahrukhaatar786@gmail.com", "Hasanw@123456"));
+		email.setHostName("smtpout.secureserver.net");
+		email.setSmtpPort(465);
+		email.setAuthenticator(new DefaultAuthenticator("integration@mypulse-sandbox.io", "Plom55AD!"));
 		email.setSSLOnConnect(true);
-		email.setFrom("shahrukhaatar58@gmail.com");
-		email.setSubject("TestMail");
+		email.setFrom("integration@mypulse-sandbox.io");
+		email.setSubject("myFunding Sandbox");
 		email.setMsg("This is a test mail ... :-)"); 
-		email.addTo("shahrukhaatar58@gmail.com");
+		email.addTo("shahrukh.aatar@mypulse.io");
 		email.send();
 		System.out.println("1111111111111111");
+		
 	}
 
 }
