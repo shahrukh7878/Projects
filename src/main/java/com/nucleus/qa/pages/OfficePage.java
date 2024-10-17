@@ -18,7 +18,7 @@ public class OfficePage extends TestBase{
 	@FindBy(xpath="//span[contains(text(),'Delete all')]")
 	WebElement ClickOnDeleteAll;
 	
-	@FindBy(xpath="(//span[contains(text(),'DONOTREPLY NUCLEUS')])[1]")
+	@FindBy(xpath="(//span[contains(text(),'Pulse (by Nucleus) updates')])[1]")
 	WebElement SelectFirstEmail;
 	
 	@FindBy(xpath="//img[@src='https://myfunding.ncf-sandbox.com/emailers/images/MyAppImages/accessbtn.png']")

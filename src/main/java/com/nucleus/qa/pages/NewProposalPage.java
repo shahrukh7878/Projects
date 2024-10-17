@@ -159,9 +159,9 @@ public class NewProposalPage extends TestBase {
 		
 	}
 	
- public void CompanyName(String Name) {
+ public void CompanyName(String CompanyName) {
 	 
-	 driver.findElement(By.xpath("//h3[contains(text(),'"+Name+"')]")).click();
+	 driver.findElement(By.xpath("//h3[contains(text(),'"+CompanyName+"')]")).click();
 		
 	
 	}

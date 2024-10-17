@@ -128,7 +128,7 @@ public class LoginPageTest extends TestBase {
 	String sheetName = "Credentilas";
 	ExtentTest logger;
 	
-	String path= "C://Users//ShahrukhAata_l4//New//Test//TestData//student.xls";
+	String path= "C://Users//ShahrukhAata_l4//Project//Test//TestData//student.xls";
 	public LoginPageTest() {
 		super();
 	}
@@ -297,18 +297,19 @@ public class LoginPageTest extends TestBase {
 	}*/
 	
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void TestCase1() throws Exception  {
-		
-		
 		 test1 = extent.createTest("Test Case1", "NucleusTestCase ");
 		try {
-			System.out.println("TestCase started");
+			System.out.println("TestCase started 1");
 		ArrayList data=d.getData("TestCase1",path);
 		System.out.println(path);
 		String url = (String) data.get(2);
 		String Username= (String) data.get(3);
 		String Password= (String) data.get(4);
+		
+		System.out.println(Password);
+		
 		String CompanyName=(String) data.get(5);
 		String Email = (String) data.get(6);
 		String PhoneNumber = (String) data.get(7);
@@ -333,7 +334,7 @@ public class LoginPageTest extends TestBase {
 		String Name = (String) data.get(29);
 		
 	
-        driver.get("https://myfunding.ncf-sandbox.com/deleteCompanyData/01554169");
+       /* driver.get("https://myfunding.ncf-sandbox.com/deleteCompanyData/01554169");
 	
 		driver.get("https://nucleus--qa.sandbox.my.salesforce.com/");
 		
@@ -408,7 +409,7 @@ public class LoginPageTest extends TestBase {
 		}
 		catch(Exception e) {
 			
-		}
+		}*/
 
 		driver.get(url);
 		
@@ -456,26 +457,28 @@ public class LoginPageTest extends TestBase {
 		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 		Sleep(5000);
-		try{
-		DirectorInformation.EditDirectorDetails();
-		DirectorInformation.DateofBirth(BirthDay1);
-		Sleep(1000);
-		DirectorInformation.Email(Email1);
-		System.out.println("email enter 2");
-		Sleep(1000);
-		DirectorInformation.DirMobile(MobileNumber);
-		DirectorInformation.PersonalGuaranteeYes();
-		DirectorInformation.EnterPostCode(PostCode);
-		DirectorInformation.ClickonFindAddress();
-		Sleep(3000);
-		DirectorInformation.SelectAddress();
-		DirectorInformation.SelectResidentialPropertyYes();
-		DirectorInformation.ClickOnSubmit();
-		} catch(Exception e)  
-        {  
-            System.out.println(e);  
-        }  
-		Sleep(3000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
 		DirectorInformation.ClickOnNext();
 		
 		Screenshot();
@@ -503,13 +506,16 @@ public class LoginPageTest extends TestBase {
 		System.out.println("11111111111111111111");
 		driver.get(url1);
 		System.out.println("11111111111111111111");
-		Sleep(6000);
+		Sleep(15000);
 		Set<String> handles3 = driver.getWindowHandles();
 		List<String> hList3 = new ArrayList<String>(handles3);
 		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
 			System.out.println("11111111111111111111");
 		      }
 		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
 		System.out.println("11111111111111111111");
 		Office.SelectFirstEmail();
 		System.out.println("11111111111111111111");
@@ -552,7 +558,7 @@ public class LoginPageTest extends TestBase {
 			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
 			      }
 			Sleep(4000);
-			myPulse.Congratulations();	
+			myPulse.Congratulations();
 			Sleep(2000);
 			Screenshot();
 			Sleep(2000);
@@ -566,9 +572,9 @@ public class LoginPageTest extends TestBase {
 		WriteExtentReport =test1.createNode("Failed Page ");
 		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
 	  }
-	  }
+	}
 	
-	@Test (enabled=true)
+	@Test (enabled=false)
 	public void TestCase2() throws Exception {
 		 test1 = extent.createTest("Test Case2", "Single Dir OB AS");
 		try {
@@ -839,14 +845,14 @@ public class LoginPageTest extends TestBase {
 		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
 	 }	
 	}		
-		@Test(enabled=true)
+		@Test(enabled=false)
 	public void TestCase3() throws Exception {
 		 test1 = extent.createTest("Test Case 3", "Single Dir/Shareholder OB Plaid");
 		try {
 			
 		ArrayList data=d.getData("TestCase3",path);
 		String url = (String) data.get(2);
-		System.out.println("TestCase4 started");
+		System.out.println("TestCase3 started");
 		String Username= (String) data.get(3);
 		String Password= (String) data.get(4);
 		String CompanyName=(String) data.get(5);
@@ -2133,19 +2139,25 @@ public class LoginPageTest extends TestBase {
 		Screenshot();
 		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		
+
+			DirectorInformation.EditDirectorDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email1);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+
+			
 		Sleep(3000);
-		DirectorInformation.EditDirectorDetails();
-		//DirectorInformation.DateofBirth(BirthDay1);
-		DirectorInformation.Email(Email1);
-		Sleep(1000);
-		DirectorInformation.DirMobile(MobileNumber);
-		DirectorInformation.PersonalGuaranteeYes();
-		DirectorInformation.EnterPostCode(PostCode);
-		DirectorInformation.ClickonFindAddress();
-		Sleep(3000);
-		DirectorInformation.SelectAddress();
-		DirectorInformation.SelectResidentialPropertyYes();
-		DirectorInformation.ClickOnSubmit();
+		
 		Sleep(1000);
 		DirectorInformation.ClickOnNext();
 		Sleep(6000);

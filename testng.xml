@@ -3,12 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.nucleus.qa.testcases.LoginPageTest">
+      <class name="com.nucleus.qa.testcases.LoginPageTest2">
 		  <methods>
-			  <include name="TestCase2">
+			    <include name="TestCase6">
 			  </include>
-			  <exclude name="TestCase1">  
-			  </exclude>
 		  </methods>
       </class>
     </classes>
