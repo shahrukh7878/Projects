@@ -180,9 +180,9 @@ public class TestBase{
 	    }*/
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(90, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
 }
 	public static void initializationoffice() {
 		
@@ -204,8 +204,9 @@ public class TestBase{
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
 		//driver.get(prop.getProperty("url"));
 		//driver.get("https://myfunding.ncf-sandbox.com/");
 	}

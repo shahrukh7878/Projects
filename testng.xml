@@ -3,10 +3,110 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.nucleus.qa.testcases.LoginPageTest2">
-		  <methods>
-			    <include name="TestCase6">
+     <!-- <class name="com.nucleus.qa.testcases.LoginPageTest2">-->
+		  <class name="com.nucleus.qa.testcases.InfinityTest">
+		  <methods> 
+			  <include name="TestCase1">
 			  </include>
+			  <include name="TestCase2">
+			  </include>
+			  <include name="TestCase3">
+			  </include>
+			  <include name="TestCase4">
+			  </include>
+			  <include name="TestCase5">
+			  </include>
+			  <include name="TestCase6">
+			  </include>
+			  <include name="TestCase7">
+			  </include>
+			  <include name="TestCase8">
+			  </include>
+			  <include name="TestCase9">
+			  </include>
+			  <include name="TestCase10">
+			  </include>
+			  <include name="TestCase11">
+			  </include>
+			  <include name="TestCase12">
+			  </include>
+			  <include name="TestCase13">
+			  </include>
+			  <include name="TestCase14">
+			  </include>
+			  <include name="TestCase15">
+			  </include>
+			  <include name="TestCase16">
+			  </include>
+			  <include name="TestCase17">
+			  </include>
+			  <include name="TestCase18">
+			  </include>
+			  <include name="TestCase19">
+			  </include>
+			  <include name="TestCase20">
+			  </include>
+			  <include name="TestCase21">
+			  </include>
+			  <include name="TestCase22">
+			  </include>
+			  <include name="TestCase23">
+			  </include>
+			  <include name="TestCase24">
+			  </include>
+			  <include name="TestCase25">
+			  </include>
+			  <include name="TestCase26">
+			  </include>
+			  <include name="TestCase27">
+			  </include>
+			  <include name="TestCase28">
+			  </include>
+			  <include name="TestCase29">
+			  </include>
+			  <include name="TestCase30">
+			  </include>
+			  <include name="TestCase31">
+			  </include>
+			  <include name="TestCase32">
+			  </include>
+			  <include name="TestCase33">
+			  </include>
+			  <include name="TestCase34">
+			  </include>
+			  <include name="TestCase35">
+			  </include>
+			  <include name="TestCase36">
+			  </include>
+			  <include name="TestCase37">
+			  </include>
+			  <include name="TestCase38">
+			  </include>
+			  <include name="TestCase39">
+			  </include>
+			  <include name="TestCase40">
+			  </include>
+			  <include name="TestCase41">
+			  </include>
+			  <include name="TestCase42">
+			  </include>
+			  <include name="TestCase43">
+			  </include>
+			  <include name="TestCase44">
+			  </include>
+			  <include name="TestCase45">
+			  </include>
+			  <include name="TestCase46">
+			  </include>
+			  <include name="TestCase47">
+			  </include>
+			  <include name="TestCase48">
+			  </include>
+			  <include name="TestCase49">
+			  </include>
+			  <include name="TestCase50">
+			  </include>
+			  
 		  </methods>
       </class>
     </classes>

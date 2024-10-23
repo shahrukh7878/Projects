@@ -26,8 +26,8 @@ public class Runner extends CoreSystemTesting  {
 				Date sDate = new Date();
 				int iHour = sDate.getHours();
 				int iMinut = sDate.getMinutes();
-				if(iHour==15){
-					if(iMinut==9)
+				if(iHour==11){
+					if(iMinut==53)
 					{
 						System.out.println("5555555555555555555");
 						TestListenerAdapter tla = new TestListenerAdapter();
@@ -157,8 +157,6 @@ public class Runner extends CoreSystemTesting  {
 						
 						String Content= htmlContent.toString();
 					
-						 
-								
 										//sendEmailWithSqData(Content);
 										
 										Thread.sleep(9000);

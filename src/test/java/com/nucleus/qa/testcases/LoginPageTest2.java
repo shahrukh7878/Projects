@@ -459,13 +459,33 @@ public class LoginPageTest2 extends TestBase {
 	        {  
 	            System.out.println(e);  
 	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -737,12 +757,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -1011,12 +1050,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -1291,8 +1349,8 @@ public class LoginPageTest2 extends TestBase {
             System.out.println(e);  
         }
 			
-			try {
-			DirectorInformation.ClickOnShareholderDetails2();
+		try {
+			DirectorInformation.EditShareholderDetails();
 			//DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
@@ -1308,6 +1366,25 @@ public class LoginPageTest2 extends TestBase {
 	        {  
 	            System.out.println(e);  
 	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
 		
 		
 		
@@ -1568,12 +1645,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -1868,12 +1964,12 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
-				try {
-				DirectorInformation.ClickOnShareholderDetails2();
+			try {
+				DirectorInformation.EditShareholderDetails();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email4);
+				DirectorInformation.Email(Email3);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.DirMobile(MobileNumber2);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -1885,6 +1981,25 @@ public class LoginPageTest2 extends TestBase {
 		        {  
 		            System.out.println(e);  
 		        }
+			
+					
+					try {
+					DirectorInformation.ClickOnShareholderDetails2();
+					//DirectorInformation.DateofBirth(BirthDay1);
+					DirectorInformation.Email(Email4);
+					Sleep(1000);
+					DirectorInformation.DirMobile(MobileNumber3);
+					DirectorInformation.PersonalGuaranteeYes();
+					DirectorInformation.EnterPostCode(PostCode);
+					DirectorInformation.ClickonFindAddress();
+					Sleep(3000);
+					DirectorInformation.SelectAddress();
+					DirectorInformation.SelectResidentialPropertyYes();
+					DirectorInformation.ClickOnSubmit();
+					} catch(Exception e)  
+			        {  
+			            System.out.println(e);  
+			        }
 			
 		
 		DirectorInformation.ClickOnNext();
@@ -2146,12 +2261,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -2422,12 +2556,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -2695,12 +2848,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();
@@ -2969,12 +3141,31 @@ public class LoginPageTest2 extends TestBase {
 	            System.out.println(e);  
 	        }
 				
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
 				//DirectorInformation.DateofBirth(BirthDay1);
-				DirectorInformation.Email(Email3);
+				DirectorInformation.Email(Email4);
 				Sleep(1000);
-				DirectorInformation.DirMobile(MobileNumber2);
+				DirectorInformation.DirMobile(MobileNumber3);
 				DirectorInformation.PersonalGuaranteeYes();
 				DirectorInformation.EnterPostCode(PostCode);
 				DirectorInformation.ClickonFindAddress();

@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-17T19:33:10 IST" name="Suite" finished-at="2024-10-17T19:36:23 IST" duration-ms="192818">
+  <suite started-at="2024-10-23T17:12:15 IST" name="Suite" finished-at="2024-10-23T17:17:37 IST" duration-ms="322196">
     <groups>
     </groups>
-    <test started-at="2024-10-17T19:33:10 IST" name="Test" finished-at="2024-10-17T19:36:23 IST" duration-ms="192818">
-      <class name="com.nucleus.qa.testcases.LoginPageTest2">
-        <test-method is-config="true" signature="start()[pri:0, instance:com.nucleus.qa.testcases.LoginPageTest2@150d80c4]" started-at="2024-10-17T19:33:10 IST" name="start" finished-at="2024-10-17T19:33:10 IST" duration-ms="22" status="PASS">
+    <test started-at="2024-10-23T17:12:15 IST" name="Test" finished-at="2024-10-23T17:17:37 IST" duration-ms="322196">
+      <class name="com.nucleus.qa.testcases.InfinityTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.nucleus.qa.testcases.InfinityTest@28e8dde3]" started-at="2024-10-23T17:12:15 IST" name="start" finished-at="2024-10-23T17:12:15 IST" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.LoginPageTest2@150d80c4]" started-at="2024-10-17T19:33:10 IST" name="setUp" finished-at="2024-10-17T19:33:12 IST" duration-ms="1564" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTest@28e8dde3]" started-at="2024-10-23T17:12:15 IST" name="setUp" finished-at="2024-10-23T17:12:17 IST" duration-ms="2015" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestCase6()[pri:0, instance:com.nucleus.qa.testcases.LoginPageTest2@150d80c4]" started-at="2024-10-17T19:33:12 IST" name="TestCase6" finished-at="2024-10-17T19:36:22 IST" duration-ms="190558" status="PASS">
+        <test-method signature="TestCase1()[pri:0, instance:com.nucleus.qa.testcases.InfinityTest@28e8dde3]" started-at="2024-10-23T17:12:17 IST" name="TestCase1" finished-at="2024-10-23T17:17:36 IST" duration-ms="318768" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase6 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.LoginPageTest2@150d80c4]" started-at="2024-10-17T19:36:22 IST" name="tearDown" finished-at="2024-10-17T19:36:23 IST" duration-ms="663" status="PASS">
+        </test-method> <!-- TestCase1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTest@28e8dde3]" started-at="2024-10-23T17:17:36 IST" name="tearDown" finished-at="2024-10-23T17:17:37 IST" duration-ms="1390" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="Exit()[pri:0, instance:com.nucleus.qa.testcases.LoginPageTest2@150d80c4]" started-at="2024-10-17T19:36:23 IST" name="Exit" finished-at="2024-10-17T19:36:24 IST" duration-ms="412" status="PASS">
+        <test-method is-config="true" signature="Exit()[pri:0, instance:com.nucleus.qa.testcases.InfinityTest@28e8dde3]" started-at="2024-10-23T17:17:37 IST" name="Exit" finished-at="2024-10-23T17:17:38 IST" duration-ms="776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Exit -->
-      </class> <!-- com.nucleus.qa.testcases.LoginPageTest2 -->
+      </class> <!-- com.nucleus.qa.testcases.InfinityTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
