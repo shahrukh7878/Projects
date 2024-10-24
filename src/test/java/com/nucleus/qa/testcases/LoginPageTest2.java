@@ -443,7 +443,7 @@ public class LoginPageTest2 extends TestBase {
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -463,7 +463,7 @@ public class LoginPageTest2 extends TestBase {
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -482,7 +482,7 @@ public class LoginPageTest2 extends TestBase {
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -740,7 +740,7 @@ public class LoginPageTest2 extends TestBase {
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -759,7 +759,7 @@ public class LoginPageTest2 extends TestBase {
 				
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -778,7 +778,7 @@ public class LoginPageTest2 extends TestBase {
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -3275,7 +3275,1512 @@ public class LoginPageTest2 extends TestBase {
 	}
 
 
+
 	
+	
+	@Test(enabled=true)
+	public void TestCase11() throws Exception  {
+		 test1 = extent.createTest("Test Case11", "NucleusTestCase ");
+		try {
+			System.out.println("TestCase started 11");
+		ArrayList data=d.getData("TestCase11",path);
+		String url = (String) data.get(2);
+		String Username= (String) data.get(3);
+		String Password= (String) data.get(4);
+		String CompanyName=(String) data.get(5);
+		String CRN = (String) data.get(6);
+		String Email = (String) data.get(7);
+		String PhoneNumber = (String) data.get(8);
+		String BirthDay = (String) data.get(9);
+		String PostCode = (String) data.get(10);
+	    String Fund = (String) data.get(11);
+		String Months = (String) data.get(12);
+		String Percent = (String) data.get(13);
+		String BirthDay1= (String) data.get(14);
+		String Email1 = (String) data.get(15);
+		String MobileNumber = (String) data.get(16);
+		String url1 = (String) data.get(17);
+		String Bank = (String) data.get(18);
+		String BankType = (String) data.get(19);
+		String Email2 = (String) data.get(20);
+		String MobileNumber1 = (String) data.get(21);
+		String Email3 = (String) data.get(22);
+		String MobileNumber2 = (String) data.get(23);
+		String Email4 = (String) data.get(24);
+		String MobileNumber3 = (String) data.get(25);
+		String HouseNumber = (String) data.get(26);
+		String HouseName = (String) data.get(27);
+		String City = (String) data.get(28);
+		String Street = (String) data.get(29);
+		String Country = (String) data.get(30);
+		
+		
+		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		
+		driver.get(URL);
+		System.out.println(CRN);
+		
+		Sleep(5000);
+		
+		driver.get(URL);
+		
+		//https://myfunding.ncf-sandbox.com/deleteCompanyData/14514499
+      
+		driver.get(url);
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate to Application landing page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		loginPage.login(Username,Password);	
+		Screenshot();
+		WriteExtentReport = test1.createNode("Navigate to Home Page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		homePage.NewProposal();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate NewProposal Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		newproposalpage.LimitedCompany();
+		newproposalpage.SearchCompanyName(CompanyName);
+		newproposalpage.CompanyName(CompanyName);
+		newproposalpage.PrimaryDirector();
+		newproposalpage.EnterEmail(Email);
+		System.out.println("email enter 1");
+		newproposalpage.EnterPhoneNumberField(PhoneNumber);
+		newproposalpage.EnterBirthDay(BirthDay);
+		newproposalpage.EnterAddressManually();
+		newproposalpage.EnterHouseNumber(HouseNumber);
+		newproposalpage.EnterHouseName(HouseName);
+		newproposalpage.EnterCity(City);
+		newproposalpage.EnterStreet(Street);
+		newproposalpage.EnterCountry(Country);
+		newproposalpage.SendPostCode(PostCode);
+		newproposalpage.SelectResidentialPropertyYes();
+		newproposalpage.BusinessAddressSelectYes();
+		newproposalpage.NextButton();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		try {
+			LoanInfo.NucleusBusinessLoan();
+			LoanInfo.ConfirmAlert();
+			}
+			catch(Exception e) {
+				 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]"))).isDisplayed();
+				    
+				driver.findElement(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]")).click();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
+			       driver.findElement(By.xpath("//div[contains(text(),'Revenue Based Loan')]")).click();
+			       LoanInfo.ConfirmAlert();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("card_terminals"))).isDisplayed();
+				    
+					driver.findElement(By.id("card_terminals")).sendKeys("5");
+					 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("average_monthly_card_volume"))).isDisplayed();
+					    
+						driver.findElement(By.id("average_monthly_card_volume")).sendKeys("2000");
+					   
+			}
+		LoanInfo.FundingNeeded(Fund);
+		LoanInfo.LoanMonths(Months);
+		LoanInfo.SelectPurposeFunding();
+		LoanInfo.BrokerPercent(Percent);
+		LoanInfo.NextStep();
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		try{
+			
+			
+			//	WebDriverWait wait=new WebDriverWait(driver, 20);
+				
+				
+				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
+				Sleep(5000);
+				driver.findElement(By.id("edit_3")).click();
+				
+				//DirectorInformation.EditShareholderDetails1();
+				Sleep(5000);
+				System.out.println("555555555555555555555555555555555555555555");
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email2);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber1);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				Sleep(3000);
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
+			
+		
+		
+		
+		DirectorInformation.ClickOnNext();
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Documents Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		Sleep(3000);
+		System.out.println("11111111111111111111");
+		Documents.SelectAccountingPackage();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnDirector();
+		System.out.println("11111111111111111111");
+
+		Documents.ClickOnOk();
+		Documents.SelectBank(Bank);
+		Documents.SelectBankAccountType(BankType);
+		Sleep(3000);
+		Documents.ClickOnDirector1();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnOk();
+		System.out.println("11111111111111111111");
+		Documents.SubmitButton();
+		System.out.println("11111111111111111111");
+		driver.get(url1);
+		System.out.println("11111111111111111111");
+		Sleep(15000);
+		Set<String> handles3 = driver.getWindowHandles();
+		List<String> hList3 = new ArrayList<String>(handles3);
+		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
+			System.out.println("11111111111111111111");
+		      }
+		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
+		System.out.println("11111111111111111111");
+		Office.SelectFirstEmail();
+		System.out.println("11111111111111111111");
+			Sleep(6000);
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Email Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickOnCompleteApplication();
+			Sleep(6000);
+			Set<String> handles = driver.getWindowHandles();
+			List<String> hList = new ArrayList<String>(handles);
+			if(switchToRightWindow("MyNucleus",hList)){
+			      System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Open Banking Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickonCompleteyourOpenBanking();
+			
+			Sleep(6000);
+			Set<String> handles1 = driver.getWindowHandles();
+			List<String> hList1 = new ArrayList<String>(handles1);
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate myPulse Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			driver.switchTo().frame(0);
+		    myPulse.ClickOnContinue();
+		    myPulse.ClickOnBank();
+		    myPulse.ClickOnBankWebsite();
+		    Sleep(6000);
+		    Set<String> handles2 = driver.getWindowHandles();
+			List<String> hList2 = new ArrayList<String>(handles2);
+			if(switchToRightWindow("First Platypus Bank - OAuth Login Page",hList2)){
+			      }
+			 myPulse.ClickOnSignIn();
+			myPulse.ClickOnAccount();
+			myPulse.ClickOnConnectAccountInformation();
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Sleep(4000);
+			myPulse.Congratulations();
+			Sleep(2000);
+			Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+	   }
+	catch(Exception e) {
+		String Error = e.toString();
+		System.out.println(Error);
+		Screenshot();
+		WriteExtentReport =test1.createNode("Failed Page ");
+		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
+	  }
+	}
+
+	
+	@Test(enabled=true)
+	public void TestCase12() throws Exception  {
+		 test1 = extent.createTest("Test Case12", "NucleusTestCase ");
+		try {
+			System.out.println("TestCase started 12");
+		ArrayList data=d.getData("TestCase12",path);
+		String url = (String) data.get(2);
+		String Username= (String) data.get(3);
+		String Password= (String) data.get(4);
+		String CompanyName=(String) data.get(5);
+		String CRN = (String) data.get(6);
+		String Email = (String) data.get(7);
+		String PhoneNumber = (String) data.get(8);
+		String BirthDay = (String) data.get(9);
+		String PostCode = (String) data.get(10);
+	    String Fund = (String) data.get(11);
+		String Months = (String) data.get(12);
+		String Percent = (String) data.get(13);
+		String BirthDay1= (String) data.get(14);
+		String Email1 = (String) data.get(15);
+		String MobileNumber = (String) data.get(16);
+		String url1 = (String) data.get(17);
+		String Bank = (String) data.get(18);
+		String BankType = (String) data.get(19);
+		String Email2 = (String) data.get(20);
+		String MobileNumber1 = (String) data.get(21);
+		String Email3 = (String) data.get(22);
+		String MobileNumber2 = (String) data.get(23);
+		String Email4 = (String) data.get(24);
+		String MobileNumber3 = (String) data.get(25);
+		String HouseNumber = (String) data.get(26);
+		String HouseName = (String) data.get(27);
+		String City = (String) data.get(28);
+		String Street = (String) data.get(29);
+		String Country = (String) data.get(30);
+		
+		
+		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		
+		driver.get(URL);
+		System.out.println(CRN);
+		
+		Sleep(5000);
+		
+		driver.get(URL);
+		
+		//https://myfunding.ncf-sandbox.com/deleteCompanyData/14514499
+      
+		driver.get(url);
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate to Application landing page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		loginPage.login(Username,Password);	
+		Screenshot();
+		WriteExtentReport = test1.createNode("Navigate to Home Page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		homePage.NewProposal();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate NewProposal Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		newproposalpage.LimitedCompany();
+		newproposalpage.SearchCompanyName(CompanyName);
+		newproposalpage.CompanyName(CompanyName);
+		newproposalpage.PrimaryDirector();
+		newproposalpage.EnterEmail(Email);
+		System.out.println("email enter 1");
+		newproposalpage.EnterPhoneNumberField(PhoneNumber);
+		newproposalpage.EnterBirthDay(BirthDay);
+		newproposalpage.EnterAddressManually();
+		newproposalpage.EnterHouseNumber(HouseNumber);
+		newproposalpage.EnterHouseName(HouseName);
+		newproposalpage.EnterCity(City);
+		newproposalpage.EnterStreet(Street);
+		newproposalpage.EnterCountry(Country);
+		newproposalpage.SendPostCode(PostCode);
+		newproposalpage.SelectResidentialPropertyYes();
+		newproposalpage.BusinessAddressSelectYes();
+		newproposalpage.NextButton();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		try {
+			LoanInfo.NucleusBusinessLoan();
+			LoanInfo.ConfirmAlert();
+			}
+			catch(Exception e) {
+				 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]"))).isDisplayed();
+				    
+				driver.findElement(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]")).click();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
+			       driver.findElement(By.xpath("//div[contains(text(),'Revenue Based Loan')]")).click();
+			       LoanInfo.ConfirmAlert();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("card_terminals"))).isDisplayed();
+				    
+					driver.findElement(By.id("card_terminals")).sendKeys("5");
+					 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("average_monthly_card_volume"))).isDisplayed();
+					    
+						driver.findElement(By.id("average_monthly_card_volume")).sendKeys("2000");
+					   
+			}
+		LoanInfo.FundingNeeded(Fund);
+		LoanInfo.LoanMonths(Months);
+		LoanInfo.SelectPurposeFunding();
+		LoanInfo.BrokerPercent(Percent);
+		LoanInfo.NextStep();
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		try{
+			
+			
+			//	WebDriverWait wait=new WebDriverWait(driver, 20);
+				
+				
+				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
+				Sleep(5000);
+				driver.findElement(By.id("edit_3")).click();
+				
+				//DirectorInformation.EditShareholderDetails1();
+				Sleep(5000);
+				System.out.println("555555555555555555555555555555555555555555");
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email2);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber1);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				Sleep(3000);
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
+			
+		
+		
+		
+		DirectorInformation.ClickOnNext();
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Documents Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		Sleep(3000);
+		System.out.println("11111111111111111111");
+		Documents.SelectAccountingPackage();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnDirector();
+		System.out.println("11111111111111111111");
+
+		Documents.ClickOnOk();
+		Documents.SelectBank(Bank);
+		Documents.SelectBankAccountType(BankType);
+		Sleep(3000);
+		Documents.ClickOnDirector1();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnOk();
+		System.out.println("11111111111111111111");
+		Documents.SubmitButton();
+		System.out.println("11111111111111111111");
+		driver.get(url1);
+		System.out.println("11111111111111111111");
+		Sleep(15000);
+		Set<String> handles3 = driver.getWindowHandles();
+		List<String> hList3 = new ArrayList<String>(handles3);
+		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
+			System.out.println("11111111111111111111");
+		      }
+		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
+		System.out.println("11111111111111111111");
+		Office.SelectFirstEmail();
+		System.out.println("11111111111111111111");
+			Sleep(6000);
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Email Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickOnCompleteApplication();
+			Sleep(6000);
+			Set<String> handles = driver.getWindowHandles();
+			List<String> hList = new ArrayList<String>(handles);
+			if(switchToRightWindow("MyNucleus",hList)){
+			      System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Open Banking Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickonCompleteyourOpenBanking();
+			
+			Sleep(6000);
+			Set<String> handles1 = driver.getWindowHandles();
+			List<String> hList1 = new ArrayList<String>(handles1);
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate myPulse Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			driver.switchTo().frame(0);
+		    myPulse.ClickOnContinue();
+		    myPulse.ClickOnBank();
+		    myPulse.ClickOnBankWebsite();
+		    Sleep(6000);
+		    Set<String> handles2 = driver.getWindowHandles();
+			List<String> hList2 = new ArrayList<String>(handles2);
+			if(switchToRightWindow("First Platypus Bank - OAuth Login Page",hList2)){
+			      }
+			 myPulse.ClickOnSignIn();
+			myPulse.ClickOnAccount();
+			myPulse.ClickOnConnectAccountInformation();
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Sleep(4000);
+			myPulse.Congratulations();
+			Sleep(2000);
+			Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+	   }
+	catch(Exception e) {
+		String Error = e.toString();
+		System.out.println(Error);
+		Screenshot();
+		WriteExtentReport =test1.createNode("Failed Page ");
+		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
+	  }
+	}
+
+	
+	
+	@Test(enabled=true)
+	public void TestCase13() throws Exception  {
+		 test1 = extent.createTest("Test Case13", "NucleusTestCase ");
+		try {
+			System.out.println("TestCase started 13");
+		ArrayList data=d.getData("TestCase13",path);
+		String url = (String) data.get(2);
+		String Username= (String) data.get(3);
+		String Password= (String) data.get(4);
+		String CompanyName=(String) data.get(5);
+		String CRN = (String) data.get(6);
+		String Email = (String) data.get(7);
+		String PhoneNumber = (String) data.get(8);
+		String BirthDay = (String) data.get(9);
+		String PostCode = (String) data.get(10);
+	    String Fund = (String) data.get(11);
+		String Months = (String) data.get(12);
+		String Percent = (String) data.get(13);
+		String BirthDay1= (String) data.get(14);
+		String Email1 = (String) data.get(15);
+		String MobileNumber = (String) data.get(16);
+		String url1 = (String) data.get(17);
+		String Bank = (String) data.get(18);
+		String BankType = (String) data.get(19);
+		String Email2 = (String) data.get(20);
+		String MobileNumber1 = (String) data.get(21);
+		String Email3 = (String) data.get(22);
+		String MobileNumber2 = (String) data.get(23);
+		String Email4 = (String) data.get(24);
+		String MobileNumber3 = (String) data.get(25);
+		String HouseNumber = (String) data.get(26);
+		String HouseName = (String) data.get(27);
+		String City = (String) data.get(28);
+		String Street = (String) data.get(29);
+		String Country = (String) data.get(30);
+		
+		
+		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		
+		driver.get(URL);
+		System.out.println(CRN);
+		
+		Sleep(5000);
+		
+		driver.get(URL);
+		
+		//https://myfunding.ncf-sandbox.com/deleteCompanyData/14514499
+      
+		driver.get(url);
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate to Application landing page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		loginPage.login(Username,Password);	
+		Screenshot();
+		WriteExtentReport = test1.createNode("Navigate to Home Page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		homePage.NewProposal();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate NewProposal Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		newproposalpage.LimitedCompany();
+		newproposalpage.SearchCompanyName(CompanyName);
+		newproposalpage.CompanyName(CompanyName);
+		newproposalpage.PrimaryDirector();
+		newproposalpage.EnterEmail(Email);
+		System.out.println("email enter 1");
+		newproposalpage.EnterPhoneNumberField(PhoneNumber);
+		newproposalpage.EnterBirthDay(BirthDay);
+		newproposalpage.EnterAddressManually();
+		newproposalpage.EnterHouseNumber(HouseNumber);
+		newproposalpage.EnterHouseName(HouseName);
+		newproposalpage.EnterCity(City);
+		newproposalpage.EnterStreet(Street);
+		newproposalpage.EnterCountry(Country);
+		newproposalpage.SendPostCode(PostCode);
+		newproposalpage.SelectResidentialPropertyYes();
+		newproposalpage.BusinessAddressSelectYes();
+		newproposalpage.NextButton();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		try {
+			LoanInfo.NucleusBusinessLoan();
+			LoanInfo.ConfirmAlert();
+			}
+			catch(Exception e) {
+				 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]"))).isDisplayed();
+				    
+				driver.findElement(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]")).click();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
+			       driver.findElement(By.xpath("//div[contains(text(),'Revenue Based Loan')]")).click();
+			       LoanInfo.ConfirmAlert();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("card_terminals"))).isDisplayed();
+				    
+					driver.findElement(By.id("card_terminals")).sendKeys("5");
+					 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("average_monthly_card_volume"))).isDisplayed();
+					    
+						driver.findElement(By.id("average_monthly_card_volume")).sendKeys("2000");
+					   
+			}
+		LoanInfo.FundingNeeded(Fund);
+		LoanInfo.LoanMonths(Months);
+		LoanInfo.SelectPurposeFunding();
+		LoanInfo.BrokerPercent(Percent);
+		LoanInfo.NextStep();
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		try{
+			
+			
+			//	WebDriverWait wait=new WebDriverWait(driver, 20);
+				
+				
+				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
+				Sleep(5000);
+				driver.findElement(By.id("edit_3")).click();
+				
+				//DirectorInformation.EditShareholderDetails1();
+				Sleep(5000);
+				System.out.println("555555555555555555555555555555555555555555");
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email2);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber1);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				Sleep(3000);
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
+			
+		
+		
+		
+		DirectorInformation.ClickOnNext();
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Documents Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		Sleep(3000);
+		System.out.println("11111111111111111111");
+		Documents.SelectAccountingPackage();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnDirector();
+		System.out.println("11111111111111111111");
+
+		Documents.ClickOnOk();
+		Documents.SelectBank(Bank);
+		Documents.SelectBankAccountType(BankType);
+		Sleep(3000);
+		Documents.ClickOnDirector1();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnOk();
+		System.out.println("11111111111111111111");
+		Documents.SubmitButton();
+		System.out.println("11111111111111111111");
+		driver.get(url1);
+		System.out.println("11111111111111111111");
+		Sleep(15000);
+		Set<String> handles3 = driver.getWindowHandles();
+		List<String> hList3 = new ArrayList<String>(handles3);
+		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
+			System.out.println("11111111111111111111");
+		      }
+		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
+		System.out.println("11111111111111111111");
+		Office.SelectFirstEmail();
+		System.out.println("11111111111111111111");
+			Sleep(6000);
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Email Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickOnCompleteApplication();
+			Sleep(6000);
+			Set<String> handles = driver.getWindowHandles();
+			List<String> hList = new ArrayList<String>(handles);
+			if(switchToRightWindow("MyNucleus",hList)){
+			      System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Open Banking Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickonCompleteyourOpenBanking();
+			
+			Sleep(6000);
+			Set<String> handles1 = driver.getWindowHandles();
+			List<String> hList1 = new ArrayList<String>(handles1);
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate myPulse Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			driver.switchTo().frame(0);
+		    myPulse.ClickOnContinue();
+		    myPulse.ClickOnBank();
+		    myPulse.ClickOnBankWebsite();
+		    Sleep(6000);
+		    Set<String> handles2 = driver.getWindowHandles();
+			List<String> hList2 = new ArrayList<String>(handles2);
+			if(switchToRightWindow("First Platypus Bank - OAuth Login Page",hList2)){
+			      }
+			 myPulse.ClickOnSignIn();
+			myPulse.ClickOnAccount();
+			myPulse.ClickOnConnectAccountInformation();
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Sleep(4000);
+			myPulse.Congratulations();
+			Sleep(2000);
+			Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+	   }
+	catch(Exception e) {
+		String Error = e.toString();
+		System.out.println(Error);
+		Screenshot();
+		WriteExtentReport =test1.createNode("Failed Page ");
+		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
+	  }
+	}
+
+	
+	
+	
+	@Test(enabled=true)
+	public void TestCase14() throws Exception  {
+		 test1 = extent.createTest("Test Case14", "NucleusTestCase ");
+		try {
+			System.out.println("TestCase started 14");
+		ArrayList data=d.getData("TestCase14",path);
+		String url = (String) data.get(2);
+		String Username= (String) data.get(3);
+		String Password= (String) data.get(4);
+		String CompanyName=(String) data.get(5);
+		String CRN = (String) data.get(6);
+		String Email = (String) data.get(7);
+		String PhoneNumber = (String) data.get(8);
+		String BirthDay = (String) data.get(9);
+		String PostCode = (String) data.get(10);
+	    String Fund = (String) data.get(11);
+		String Months = (String) data.get(12);
+		String Percent = (String) data.get(13);
+		String BirthDay1= (String) data.get(14);
+		String Email1 = (String) data.get(15);
+		String MobileNumber = (String) data.get(16);
+		String url1 = (String) data.get(17);
+		String Bank = (String) data.get(18);
+		String BankType = (String) data.get(19);
+		String Email2 = (String) data.get(20);
+		String MobileNumber1 = (String) data.get(21);
+		String Email3 = (String) data.get(22);
+		String MobileNumber2 = (String) data.get(23);
+		String Email4 = (String) data.get(24);
+		String MobileNumber3 = (String) data.get(25);
+		String HouseNumber = (String) data.get(26);
+		String HouseName = (String) data.get(27);
+		String City = (String) data.get(28);
+		String Street = (String) data.get(29);
+		String Country = (String) data.get(30);
+		
+		
+		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		
+		driver.get(URL);
+		System.out.println(CRN);
+		
+		Sleep(5000);
+		
+		driver.get(URL);
+		
+		//https://myfunding.ncf-sandbox.com/deleteCompanyData/14514499
+      
+		driver.get(url);
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate to Application landing page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		loginPage.login(Username,Password);	
+		Screenshot();
+		WriteExtentReport = test1.createNode("Navigate to Home Page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		homePage.NewProposal();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate NewProposal Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		newproposalpage.LimitedCompany();
+		newproposalpage.SearchCompanyName(CompanyName);
+		newproposalpage.CompanyName(CompanyName);
+		newproposalpage.PrimaryDirector();
+		newproposalpage.EnterEmail(Email);
+		System.out.println("email enter 1");
+		newproposalpage.EnterPhoneNumberField(PhoneNumber);
+		newproposalpage.EnterBirthDay(BirthDay);
+		newproposalpage.EnterAddressManually();
+		newproposalpage.EnterHouseNumber(HouseNumber);
+		newproposalpage.EnterHouseName(HouseName);
+		newproposalpage.EnterCity(City);
+		newproposalpage.EnterStreet(Street);
+		newproposalpage.EnterCountry(Country);
+		newproposalpage.SendPostCode(PostCode);
+		newproposalpage.SelectResidentialPropertyYes();
+		newproposalpage.BusinessAddressSelectYes();
+		newproposalpage.NextButton();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		try {
+			LoanInfo.NucleusBusinessLoan();
+			LoanInfo.ConfirmAlert();
+			}
+			catch(Exception e) {
+				 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]"))).isDisplayed();
+				    
+				driver.findElement(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]")).click();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
+			       driver.findElement(By.xpath("//div[contains(text(),'Revenue Based Loan')]")).click();
+			       LoanInfo.ConfirmAlert();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("card_terminals"))).isDisplayed();
+				    
+					driver.findElement(By.id("card_terminals")).sendKeys("5");
+					 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("average_monthly_card_volume"))).isDisplayed();
+					    
+						driver.findElement(By.id("average_monthly_card_volume")).sendKeys("2000");
+					   
+			}
+		LoanInfo.FundingNeeded(Fund);
+		LoanInfo.LoanMonths(Months);
+		LoanInfo.SelectPurposeFunding();
+		LoanInfo.BrokerPercent(Percent);
+		LoanInfo.NextStep();
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		try{
+			
+			
+			//	WebDriverWait wait=new WebDriverWait(driver, 20);
+				
+				
+				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
+				Sleep(5000);
+				driver.findElement(By.id("edit_3")).click();
+				
+				//DirectorInformation.EditShareholderDetails1();
+				Sleep(5000);
+				System.out.println("555555555555555555555555555555555555555555");
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email2);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber1);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				Sleep(3000);
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
+			
+		
+		
+		
+		DirectorInformation.ClickOnNext();
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Documents Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		Sleep(3000);
+		System.out.println("11111111111111111111");
+		Documents.SelectAccountingPackage();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnDirector();
+		System.out.println("11111111111111111111");
+
+		Documents.ClickOnOk();
+		Documents.SelectBank(Bank);
+		Documents.SelectBankAccountType(BankType);
+		Sleep(3000);
+		Documents.ClickOnDirector1();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnOk();
+		System.out.println("11111111111111111111");
+		Documents.SubmitButton();
+		System.out.println("11111111111111111111");
+		driver.get(url1);
+		System.out.println("11111111111111111111");
+		Sleep(15000);
+		Set<String> handles3 = driver.getWindowHandles();
+		List<String> hList3 = new ArrayList<String>(handles3);
+		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
+			System.out.println("11111111111111111111");
+		      }
+		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
+		System.out.println("11111111111111111111");
+		Office.SelectFirstEmail();
+		System.out.println("11111111111111111111");
+			Sleep(6000);
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Email Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickOnCompleteApplication();
+			Sleep(6000);
+			Set<String> handles = driver.getWindowHandles();
+			List<String> hList = new ArrayList<String>(handles);
+			if(switchToRightWindow("MyNucleus",hList)){
+			      System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Open Banking Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickonCompleteyourOpenBanking();
+			
+			Sleep(6000);
+			Set<String> handles1 = driver.getWindowHandles();
+			List<String> hList1 = new ArrayList<String>(handles1);
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate myPulse Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			driver.switchTo().frame(0);
+		    myPulse.ClickOnContinue();
+		    myPulse.ClickOnBank();
+		    myPulse.ClickOnBankWebsite();
+		    Sleep(6000);
+		    Set<String> handles2 = driver.getWindowHandles();
+			List<String> hList2 = new ArrayList<String>(handles2);
+			if(switchToRightWindow("First Platypus Bank - OAuth Login Page",hList2)){
+			      }
+			 myPulse.ClickOnSignIn();
+			myPulse.ClickOnAccount();
+			myPulse.ClickOnConnectAccountInformation();
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Sleep(4000);
+			myPulse.Congratulations();
+			Sleep(2000);
+			Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+	   }
+	catch(Exception e) {
+		String Error = e.toString();
+		System.out.println(Error);
+		Screenshot();
+		WriteExtentReport =test1.createNode("Failed Page ");
+		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
+	  }
+	}
+
+	
+	
+	@Test(enabled=true)
+	public void TestCase15() throws Exception  {
+		 test1 = extent.createTest("Test Case15", "NucleusTestCase ");
+		try {
+			System.out.println("TestCase started 15");
+		ArrayList data=d.getData("TestCase15",path);
+		String url = (String) data.get(2);
+		String Username= (String) data.get(3);
+		String Password= (String) data.get(4);
+		String CompanyName=(String) data.get(5);
+		String CRN = (String) data.get(6);
+		String Email = (String) data.get(7);
+		String PhoneNumber = (String) data.get(8);
+		String BirthDay = (String) data.get(9);
+		String PostCode = (String) data.get(10);
+	    String Fund = (String) data.get(11);
+		String Months = (String) data.get(12);
+		String Percent = (String) data.get(13);
+		String BirthDay1= (String) data.get(14);
+		String Email1 = (String) data.get(15);
+		String MobileNumber = (String) data.get(16);
+		String url1 = (String) data.get(17);
+		String Bank = (String) data.get(18);
+		String BankType = (String) data.get(19);
+		String Email2 = (String) data.get(20);
+		String MobileNumber1 = (String) data.get(21);
+		String Email3 = (String) data.get(22);
+		String MobileNumber2 = (String) data.get(23);
+		String Email4 = (String) data.get(24);
+		String MobileNumber3 = (String) data.get(25);
+		String HouseNumber = (String) data.get(26);
+		String HouseName = (String) data.get(27);
+		String City = (String) data.get(28);
+		String Street = (String) data.get(29);
+		String Country = (String) data.get(30);
+		
+		
+		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		
+		driver.get(URL);
+		System.out.println(CRN);
+		
+		Sleep(5000);
+		
+		driver.get(URL);
+		
+		//https://myfunding.ncf-sandbox.com/deleteCompanyData/14514499
+      
+		driver.get(url);
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate to Application landing page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		loginPage.login(Username,Password);	
+		Screenshot();
+		WriteExtentReport = test1.createNode("Navigate to Home Page");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		homePage.NewProposal();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate NewProposal Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		newproposalpage.LimitedCompany();
+		newproposalpage.SearchCompanyName(CompanyName);
+		newproposalpage.CompanyName(CompanyName);
+		newproposalpage.PrimaryDirector();
+		newproposalpage.EnterEmail(Email);
+		System.out.println("email enter 1");
+		newproposalpage.EnterPhoneNumberField(PhoneNumber);
+		newproposalpage.EnterBirthDay(BirthDay);
+		newproposalpage.EnterAddressManually();
+		newproposalpage.EnterHouseNumber(HouseNumber);
+		newproposalpage.EnterHouseName(HouseName);
+		newproposalpage.EnterCity(City);
+		newproposalpage.EnterStreet(Street);
+		newproposalpage.EnterCountry(Country);
+		newproposalpage.SendPostCode(PostCode);
+		newproposalpage.SelectResidentialPropertyYes();
+		newproposalpage.BusinessAddressSelectYes();
+		newproposalpage.NextButton();
+		Screenshot(); 
+		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		try {
+			LoanInfo.NucleusBusinessLoan();
+			LoanInfo.ConfirmAlert();
+			}
+			catch(Exception e) {
+				 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]"))).isDisplayed();
+				    
+				driver.findElement(By.xpath("(//p[@id='popupmessage']//following-sibling::a)[1]")).click();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
+			       driver.findElement(By.xpath("//div[contains(text(),'Revenue Based Loan')]")).click();
+			       LoanInfo.ConfirmAlert();
+			       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("card_terminals"))).isDisplayed();
+				    
+					driver.findElement(By.id("card_terminals")).sendKeys("5");
+					 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("average_monthly_card_volume"))).isDisplayed();
+					    
+						driver.findElement(By.id("average_monthly_card_volume")).sendKeys("2000");
+					   
+			}
+		LoanInfo.FundingNeeded(Fund);
+		LoanInfo.LoanMonths(Months);
+		LoanInfo.SelectPurposeFunding();
+		LoanInfo.BrokerPercent(Percent);
+		LoanInfo.NextStep();
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Director Information Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		Sleep(5000);
+		
+		
+		try {
+			DirectorInformation.EditDirectorDetails();
+			DirectorInformation.DateofBirth(BirthDay1);
+			Sleep(1000);
+			DirectorInformation.Email(Email1);
+			System.out.println("email enter 2");
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+		}
+		catch(Exception e) {
+			
+		}
+		
+		try{
+			
+			
+			//	WebDriverWait wait=new WebDriverWait(driver, 20);
+				
+				
+				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
+				Sleep(5000);
+				driver.findElement(By.id("edit_3")).click();
+				
+				//DirectorInformation.EditShareholderDetails1();
+				Sleep(5000);
+				System.out.println("555555555555555555555555555555555555555555");
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email2);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber1);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				Sleep(3000);
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+		
+		try {
+			DirectorInformation.EditShareholderDetails();
+			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.Email(Email3);
+			Sleep(1000);
+			DirectorInformation.DirMobile(MobileNumber2);
+			DirectorInformation.PersonalGuaranteeYes();
+			DirectorInformation.EnterPostCode(PostCode);
+			DirectorInformation.ClickonFindAddress();
+			Sleep(3000);
+			DirectorInformation.SelectAddress();
+			DirectorInformation.SelectResidentialPropertyYes();
+			DirectorInformation.ClickOnSubmit();
+			} catch(Exception e)  
+	        {  
+	            System.out.println(e);  
+	        }
+		
+				
+				try {
+				DirectorInformation.ClickOnShareholderDetails2();
+				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.Email(Email4);
+				Sleep(1000);
+				DirectorInformation.DirMobile(MobileNumber3);
+				DirectorInformation.PersonalGuaranteeYes();
+				DirectorInformation.EnterPostCode(PostCode);
+				DirectorInformation.ClickonFindAddress();
+				Sleep(3000);
+				DirectorInformation.SelectAddress();
+				DirectorInformation.SelectResidentialPropertyYes();
+				DirectorInformation.ClickOnSubmit();
+				} catch(Exception e)  
+		        {  
+		            System.out.println(e);  
+		        }
+			
+		
+		
+		
+		DirectorInformation.ClickOnNext();
+		
+		Screenshot();
+		WriteExtentReport =test1.createNode("Navigate Documents Page ");
+		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		Sleep(3000);
+		System.out.println("11111111111111111111");
+		Documents.SelectAccountingPackage();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnDirector();
+		System.out.println("11111111111111111111");
+
+		Documents.ClickOnOk();
+		Documents.SelectBank(Bank);
+		Documents.SelectBankAccountType(BankType);
+		Sleep(3000);
+		Documents.ClickOnDirector1();
+		System.out.println("11111111111111111111");
+		Sleep(3000);
+		Documents.ClickOnOk();
+		System.out.println("11111111111111111111");
+		Documents.SubmitButton();
+		System.out.println("11111111111111111111");
+		driver.get(url1);
+		System.out.println("11111111111111111111");
+		Sleep(15000);
+		Set<String> handles3 = driver.getWindowHandles();
+		List<String> hList3 = new ArrayList<String>(handles3);
+		if(switchToRightWindow("Mail - Shahrukh Aatar - Outlook",hList3)){
+			System.out.println("11111111111111111111");
+		      }
+		Office.ClickOnPulse();
+		
+		
+		//driver.findElement(By.xpath("//span[@id='id__292']")).click();
+		System.out.println("11111111111111111111");
+		Office.SelectFirstEmail();
+		System.out.println("11111111111111111111");
+			Sleep(6000);
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Email Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickOnCompleteApplication();
+			Sleep(6000);
+			Set<String> handles = driver.getWindowHandles();
+			List<String> hList = new ArrayList<String>(handles);
+			if(switchToRightWindow("MyNucleus",hList)){
+			      System.out.println(driver.getCurrentUrl() + ": " + driver.getTitle());
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate Open Banking Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			Office.ClickonCompleteyourOpenBanking();
+			
+			Sleep(6000);
+			Set<String> handles1 = driver.getWindowHandles();
+			List<String> hList1 = new ArrayList<String>(handles1);
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Screenshot();
+			WriteExtentReport =test1.createNode("Navigate myPulse Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			driver.switchTo().frame(0);
+		    myPulse.ClickOnContinue();
+		    myPulse.ClickOnBank();
+		    myPulse.ClickOnBankWebsite();
+		    Sleep(6000);
+		    Set<String> handles2 = driver.getWindowHandles();
+			List<String> hList2 = new ArrayList<String>(handles2);
+			if(switchToRightWindow("First Platypus Bank - OAuth Login Page",hList2)){
+			      }
+			 myPulse.ClickOnSignIn();
+			myPulse.ClickOnAccount();
+			myPulse.ClickOnConnectAccountInformation();
+			if(switchToRightWindow("myPulse - Plaid Open Banking",hList1)){
+			      }
+			Sleep(4000);
+			myPulse.Congratulations();
+			Sleep(2000);
+			Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+	   }
+	catch(Exception e) {
+		String Error = e.toString();
+		System.out.println(Error);
+		Screenshot();
+		WriteExtentReport =test1.createNode("Failed Page ");
+		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
+	  }
+	}
+
 
 	@AfterMethod
 	public void tearDown() throws Exception {

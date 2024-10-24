@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.nucleus.qa.testcases.InfinityTest" class="method navigator-link" hash-for-method="TestCase1">TestCase1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.nucleus.qa.testcases.LoginPageTest2" class="method navigator-link" hash-for-method="TestCase1">TestCase1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,7 +121,7 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.nucleus.qa.testcases.InfinityTest</span>
+              <span class="class-name">com.nucleus.qa.testcases.LoginPageTest2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -145,11 +145,11 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.nucleus.qa.testcases.InfinityTest&quot;&gt;
+      &lt;class name=&quot;com.nucleus.qa.testcases.LoginPageTest2&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;TestCase1&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.nucleus.qa.testcases.InfinityTest --&gt;
+      &lt;/class&gt; &lt;!-- com.nucleus.qa.testcases.LoginPageTest2 --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -192,13 +192,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TestCase1')
-data.setCell(0, 2, 'com.nucleus.qa.testcases.InfinityTest')
-data.setCell(0, 3, 318768);
+data.setCell(0, 2, 'com.nucleus.qa.testcases.LoginPageTest2')
+data.setCell(0, 3, 217962);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -213,15 +213,39 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">14 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.nucleus.qa.testcases.InfinityTest</span>
+              <span class="ignored-class-name">com.nucleus.qa.testcases.LoginPageTest2</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">TestCase2</span>
-                <br/>
                 <span class="ignored-method-name">TestCase3</span>
+                <br/>
+                <span class="ignored-method-name">TestCase4</span>
+                <br/>
+                <span class="ignored-method-name">TestCase5</span>
+                <br/>
+                <span class="ignored-method-name">TestCase14</span>
+                <br/>
+                <span class="ignored-method-name">TestCase15</span>
+                <br/>
+                <span class="ignored-method-name">TestCase13</span>
+                <br/>
+                <span class="ignored-method-name">TestCase12</span>
+                <br/>
+                <span class="ignored-method-name">TestCase10</span>
+                <br/>
+                <span class="ignored-method-name">TestCase11</span>
+                <br/>
+                <span class="ignored-method-name">TestCase6</span>
+                <br/>
+                <span class="ignored-method-name">TestCase7</span>
+                <br/>
+                <span class="ignored-method-name">TestCase8</span>
+                <br/>
+                <span class="ignored-method-name">TestCase9</span>
+                <br/>
+                <span class="ignored-method-name">TestCase2</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -233,26 +257,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.nucleus.qa.testcases.InfinityTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.nucleus.qa.testcases.LoginPageTest2</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">start</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">46 ms</span>
+                <span class="method-start">44 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">TestCase1</span>
-                <span class="method-start">2062 ms</span>
+                <span class="method-start">1410 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">320830 ms</span>
+                <span class="method-start">219372 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">Exit</span>
-                <span class="method-start">322283 ms</span>
+                <span class="method-start">220117 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
