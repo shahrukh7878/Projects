@@ -5,9 +5,9 @@
     <classes>
       <class name="com.nucleus.qa.testcases.InfinityTest">
         <methods>
+          <include name="TestCase6"/>
           <include name="setUp"/>
           <include name="start"/>
-          <include name="TestCase1"/>
           <include name="Exit"/>
           <include name="tearDown"/>
         </methods>

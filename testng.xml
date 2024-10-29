@@ -3,10 +3,38 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.nucleus.qa.testcases.LoginPageTest2">
-		 <!-- <class name="com.nucleus.qa.testcases.InfinityTest">-->
+       <!-- <class name="com.nucleus.qa.testcases.LoginPageTest2">-->
+		<class name="com.nucleus.qa.testcases.InfinityTest">
 		  <methods> 
 			  <include name="TestCase1">
+			  </include>
+			  <include name="TestCase2">
+			  </include>
+			  <include name="TestCase3">
+			  </include>
+			  <include name="TestCase4">
+			  </include>
+			  <include name="TestCase5">
+			  </include>
+			  <include name="TestCase6">
+			  </include>
+			  <include name="TestCase7">
+			  </include>
+			  <include name="TestCase8">
+			  </include>
+			   <include name="TestCase9">
+			  </include>
+			   <include name="TestCase10">
+			  </include>
+			   <include name="TestCase11">
+			  </include>
+			   <include name="TestCase12">
+			  </include>
+			   <include name="TestCase13">
+			  </include>
+			   <include name="TestCase14">
+			  </include>
+			   <include name="TestCase15">
 			  </include>
 		  </methods>
       </class>

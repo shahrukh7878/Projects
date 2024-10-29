@@ -26,8 +26,8 @@ public class Runner extends CoreSystemTesting  {
 				Date sDate = new Date();
 				int iHour = sDate.getHours();
 				int iMinut = sDate.getMinutes();
-				if(iHour==11){
-					if(iMinut==24)
+				if(iHour==17){
+					if(iMinut==25)
 					{
 						System.out.println("5555555555555555555");
 						TestListenerAdapter tla = new TestListenerAdapter();
@@ -36,8 +36,7 @@ public class Runner extends CoreSystemTesting  {
 					    testng.addListener(tla);
 					    testng.run(); 
 					    
-					    
-					    
+			
 					    LocalDateTime localDate = LocalDateTime.now().minusDays(0);
 						DateTimeFormatter customFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");
 						

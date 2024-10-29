@@ -231,7 +231,7 @@ public class InfinityTest extends TestBase{
 		String DirectorLastName = (String) data.get(36);
 		
 		
-		driver.get(Saleforceurl);
+driver.get(Saleforceurl);
 		
 		Sleep(3000);
 		Screenshot();
@@ -280,6 +280,7 @@ public class InfinityTest extends TestBase{
 		WriteExtentReport =test1.createNode("Navigate to Create Lead Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
       
+		
 		NucleusSaleforce.ClickOnContinue();
 		NucleusSaleforce.EnterFirstName(DirectorFirstName);
 		NucleusSaleforce.EnterLastName(DirectorLastName);

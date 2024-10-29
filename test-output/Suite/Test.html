@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>14/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Oct 24 19:18:17 IST 2024</td>
+<td>Started on:</td><td>Mon Oct 28 13:46:30 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>220 seconds (220053 ms)</td>
+<tr><td>Total time:</td><td>6527 seconds (6527476 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,91 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase6()'><b>TestCase6</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: MicrosoftEdge=130.0.2849.52)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PIO-L-4110&apos;, ip: &apos;192.168.100.87&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 130.0.2849.52, fedcm:accounts: true, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:60731}, msedge: {msedgedriverVersion: 130.0.2849.46 (bf1f0130f43a..., userDataDir: C:\Users\SHAHRU~2\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52598df1308704c4cb568e87f97ca3c4
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.nucleus.qa.base.TestBase.Screenshot(TestBase.java:390)
+	at com.nucleus.qa.testcases.InfinityTest.TestCase6(InfinityTest.java:3869)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1652913493", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1652913493'><pre>org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: MicrosoftEdge=130.0.2849.52)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PIO-L-4110&apos;, ip: &apos;192.168.100.87&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 130.0.2849.52, fedcm:accounts: true, javascriptEnabled: true, ms:edgeOptions: {debuggerAddress: localhost:60731}, msedge: {msedgedriverVersion: 130.0.2849.46 (bf1f0130f43a..., userDataDir: C:\Users\SHAHRU~2\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52598df1308704c4cb568e87f97ca3c4
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
+	at com.nucleus.qa.base.TestBase.Screenshot(TestBase.java:390)
+	at com.nucleus.qa.testcases.InfinityTest.TestCase6(InfinityTest.java:3869)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>3031</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,10 +161,75 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.nucleus.qa.testcases.LoginPageTest2.TestCase1()'><b>TestCase1</b><br>Test class: com.nucleus.qa.testcases.LoginPageTest2</td>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase14()'><b>TestCase14</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
 <td></td>
-<td>217</td>
-<td>com.nucleus.qa.testcases.LoginPageTest2@437ebf59</td></tr>
+<td>271</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase4()'><b>TestCase4</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>274</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase9()'><b>TestCase9</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>239</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase11()'><b>TestCase11</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>110</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase3()'><b>TestCase3</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>322</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase5()'><b>TestCase5</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>118</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase7()'><b>TestCase7</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>275</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase2()'><b>TestCase2</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>397</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase1()'><b>TestCase1</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>71</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase10()'><b>TestCase10</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>258</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase12()'><b>TestCase12</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>250</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase8()'><b>TestCase8</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>305</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase13()'><b>TestCase13</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>271</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
+<tr>
+<td title='com.nucleus.qa.testcases.InfinityTest.TestCase15()'><b>TestCase15</b><br>Test class: com.nucleus.qa.testcases.InfinityTest</td>
+<td></td>
+<td>301</td>
+<td>com.nucleus.qa.testcases.InfinityTest@294e5088</td></tr>
 </table><p>
 </body>
 </html>
