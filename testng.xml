@@ -18,24 +18,6 @@
 			  </include>
 			  <include name="TestCase6">
 			  </include>
-			  <include name="TestCase7">
-			  </include>
-			  <include name="TestCase8">
-			  </include>
-			   <include name="TestCase9">
-			  </include>
-			   <include name="TestCase10">
-			  </include>
-			   <include name="TestCase11">
-			  </include>
-			   <include name="TestCase12">
-			  </include>
-			   <include name="TestCase13">
-			  </include>
-			   <include name="TestCase14">
-			  </include>
-			   <include name="TestCase15">
-			  </include>
 		  </methods>
       </class>
     </classes>

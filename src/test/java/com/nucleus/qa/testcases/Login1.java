@@ -288,7 +288,7 @@ public class Login1 extends TestBase {
 	}*/
 	
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void TestCase1() throws Exception  {
 		 test1 = extent.createTest("Test Case1", "NucleusTestCase ");
 		try {
@@ -331,9 +331,17 @@ public class Login1 extends TestBase {
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("myUL"))).isDisplayed();
 	     driver.findElement(By.id("myUL")).click();
 	     
-	     
 	     new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("ico"))).isDisplayed();
 	      driver.findElement(By.id("ico")).sendKeys(ICORegistrationNumber);
+	      
+	     Sleep(2000);
+	 	 Screenshot();
+		 Sleep(2000);
+		 WriteExtentReport =test1.createNode("Navigate Company Information Page ");
+		 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+
+	     
+	     
 	     
 	     /*new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='crn']"))).isDisplayed();
 	     driver.findElement(By.xpath("//input[@id='crn']")).sendKeys(CRN);
@@ -394,6 +402,14 @@ public class Login1 extends TestBase {
 	      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//li[contains(text(),'1 Roundhead Street, Nantwich,Cheshire')]"))).isDisplayed();//
 	      driver.findElement(By.xpath("//li[contains(text(),'1 Roundhead Street, Nantwich,Cheshire')]")).click();
 	      
+	      Sleep(2000);
+	      Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Company Director's Information Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+
+	      
+	      
 	    //  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[contains(text(),'Find Address')])[2]"))).isDisplayed();//
 	     // driver.findElement(By.xpath("(//button[contains(text(),'Find Address')])[2]")).click();
 	      
@@ -425,9 +441,17 @@ public class Login1 extends TestBase {
 	      driver.findElement(By.xpath("//input[@id='b_email']")).sendKeys(BrokerEmaiID);
 	      
 	      
+	      
+	      Sleep(2000);
+	      Screenshot();
+			Sleep(2000);
+			WriteExtentReport =test1.createNode("Navigate Broker's Information Page ");
+			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+
+	      
 	      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("intro_assess"))).isDisplayed();
 	      driver.findElement(By.id("intro_assess")).click();
-	      
+	      Sleep(2000);
 	      	Screenshot();
 			Sleep(2000);
 			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
@@ -590,7 +614,7 @@ public class Login1 extends TestBase {
 	
 	
 
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TestCase3() throws Exception  {
 		 test1 = extent.createTest("Test Case3", "NucleusTestCase ");
 		try {

@@ -18,16 +18,13 @@ public class Runner extends CoreSystemTesting  {
 
 	public static void main(String[] args) throws Exception {
 		
-		
-		
-		
 		 while(true)
 			{
 				Date sDate = new Date();
 				int iHour = sDate.getHours();
 				int iMinut = sDate.getMinutes();
-				if(iHour==17){
-					if(iMinut==25)
+				if(iHour==12){
+					if(iMinut==12)
 					{
 						System.out.println("5555555555555555555");
 						TestListenerAdapter tla = new TestListenerAdapter();
@@ -36,9 +33,9 @@ public class Runner extends CoreSystemTesting  {
 					    testng.addListener(tla);
 					    testng.run(); 
 					    
-			
-					    LocalDateTime localDate = LocalDateTime.now().minusDays(0);
+					  LocalDateTime localDate = LocalDateTime.now().minusDays(0);
 						DateTimeFormatter customFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");
+						
 						
 						String Date = customFormat.format(localDate);
 						
@@ -82,10 +79,6 @@ public class Runner extends CoreSystemTesting  {
 				        String Mycollection= cell9.getStringCellValue();
 				        String MyReportingPortal= cell10.getStringCellValue();
 				        String MyAdminPortal= cell11.getStringCellValue();
-						
-						
-					
-						
 						
 						StringBuilder htmlContent = new StringBuilder();
 						htmlContent.append("<!DOCTYPE html>\r\n"
@@ -150,20 +143,10 @@ public class Runner extends CoreSystemTesting  {
 								+ "\r\n"
 								+ "");
 				    
-					
-						
-						
-						
 						String Content= htmlContent.toString();
 					
 										//sendEmailWithSqData(Content);
-										
 										Thread.sleep(9000);
-										
-										
-					    
-					    
-					    
 					    EmailSend ob = new EmailSend();
 					    
 					    

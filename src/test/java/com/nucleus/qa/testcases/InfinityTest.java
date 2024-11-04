@@ -113,9 +113,6 @@ public class InfinityTest extends TestBase{
 	@BeforeMethod
 	public void setUp() {
 		
-		
-		
-		
 		initializationInfinity();
 		InfinityLogin=new InfinityLoginPage();
 		InfinityHome = new InfinityHomePage();
@@ -416,8 +413,6 @@ driver.get(Saleforceurl);
 				
 				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[@id='popmsgother']//following-sibling::a"))).isDisplayed();   
 				driver.findElement(By.xpath("//p[@id='popmsgother']//following-sibling::a")).click();
-				
-				
 				
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Revenue Based Loan')]"))).isDisplayed();
 	        Sleep(2000);
