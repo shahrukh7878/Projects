@@ -1,201 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-04T13:34:29 IST" name="Default suite" finished-at="2024-11-04T14:32:23 IST" duration-ms="3473788">
+  <suite started-at="2025-01-28T19:36:35 IST" name="Suite" finished-at="2025-01-28T19:37:07 IST" duration-ms="32746">
     <groups>
     </groups>
-    <test started-at="2024-11-04T13:34:29 IST" name="Default test" finished-at="2024-11-04T14:32:23 IST" duration-ms="3473788">
-      <class name="com.nucleus.qa.testcases.InfinityTestTele">
-        <test-method is-config="true" signature="start()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:34:29 IST" name="start" finished-at="2024-11-04T13:34:29 IST" duration-ms="18" status="PASS">
+    <test started-at="2025-01-28T19:36:35 IST" name="Test" finished-at="2025-01-28T19:37:07 IST" duration-ms="32746">
+      <class name="com.nucleus.qa.testcases.ExternalPortal">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.nucleus.qa.testcases.ExternalPortal@56de6d6b]" started-at="2025-01-28T19:36:35 IST" name="start" finished-at="2025-01-28T19:36:35 IST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:34:29 IST" name="setUp" finished-at="2024-11-04T13:34:31 IST" duration-ms="1536" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.ExternalPortal@56de6d6b]" started-at="2025-01-28T19:36:35 IST" name="setUp" finished-at="2025-01-28T19:36:36 IST" duration-ms="1473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TestCase1()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:34:31 IST" name="TestCase1" finished-at="2024-11-04T13:38:22 IST" duration-ms="230786" status="PASS">
+        <test-method signature="TestCase1()[pri:0, instance:com.nucleus.qa.testcases.ExternalPortal@56de6d6b]" started-at="2025-01-28T19:36:36 IST" name="TestCase1" finished-at="2025-01-28T19:37:07 IST" duration-ms="30849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:38:22 IST" name="tearDown" finished-at="2024-11-04T13:38:22 IST" duration-ms="542" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.ExternalPortal@56de6d6b]" started-at="2025-01-28T19:37:07 IST" name="tearDown" finished-at="2025-01-28T19:37:07 IST" duration-ms="392" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:38:22 IST" name="setUp" finished-at="2024-11-04T13:38:23 IST" duration-ms="1081" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase10()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:38:23 IST" name="TestCase10" finished-at="2024-11-04T13:42:25 IST" duration-ms="241885" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase10 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:42:25 IST" name="tearDown" finished-at="2024-11-04T13:42:26 IST" duration-ms="659" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:42:26 IST" name="setUp" finished-at="2024-11-04T13:42:27 IST" duration-ms="1056" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase11()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:42:27 IST" name="TestCase11" finished-at="2024-11-04T13:44:21 IST" duration-ms="113709" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase11 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:44:21 IST" name="tearDown" finished-at="2024-11-04T13:44:21 IST" duration-ms="569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:44:21 IST" name="setUp" finished-at="2024-11-04T13:44:22 IST" duration-ms="1070" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase12()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:44:22 IST" name="TestCase12" finished-at="2024-11-04T13:48:21 IST" duration-ms="239029" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase12 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:48:21 IST" name="tearDown" finished-at="2024-11-04T13:48:22 IST" duration-ms="581" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:48:22 IST" name="setUp" finished-at="2024-11-04T13:48:23 IST" duration-ms="1242" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase13()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:48:23 IST" name="TestCase13" finished-at="2024-11-04T13:51:37 IST" duration-ms="193831" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase13 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:51:37 IST" name="tearDown" finished-at="2024-11-04T13:51:38 IST" duration-ms="510" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:51:38 IST" name="setUp" finished-at="2024-11-04T13:51:39 IST" duration-ms="1099" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase14()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:51:39 IST" name="TestCase14" finished-at="2024-11-04T13:55:40 IST" duration-ms="241237" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase14 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:55:40 IST" name="tearDown" finished-at="2024-11-04T13:55:41 IST" duration-ms="742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:55:41 IST" name="setUp" finished-at="2024-11-04T13:55:42 IST" duration-ms="1178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase15()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:55:42 IST" name="TestCase15" finished-at="2024-11-04T13:57:43 IST" duration-ms="120808" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase15 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:57:43 IST" name="tearDown" finished-at="2024-11-04T13:57:43 IST" duration-ms="477" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:57:43 IST" name="setUp" finished-at="2024-11-04T13:57:44 IST" duration-ms="1126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase2()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T13:57:44 IST" name="TestCase2" finished-at="2024-11-04T14:01:43 IST" duration-ms="238291" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase2 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:01:43 IST" name="tearDown" finished-at="2024-11-04T14:01:43 IST" duration-ms="636" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:01:43 IST" name="setUp" finished-at="2024-11-04T14:01:44 IST" duration-ms="1197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase3()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:01:44 IST" name="TestCase3" finished-at="2024-11-04T14:05:38 IST" duration-ms="233620" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase3 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:05:38 IST" name="tearDown" finished-at="2024-11-04T14:05:39 IST" duration-ms="613" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:05:39 IST" name="setUp" finished-at="2024-11-04T14:05:40 IST" duration-ms="1123" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase4()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:05:40 IST" name="TestCase4" finished-at="2024-11-04T14:10:44 IST" duration-ms="303840" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase4 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:10:44 IST" name="tearDown" finished-at="2024-11-04T14:10:44 IST" duration-ms="590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:10:44 IST" name="setUp" finished-at="2024-11-04T14:10:45 IST" duration-ms="1188" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase5()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:10:45 IST" name="TestCase5" finished-at="2024-11-04T14:14:53 IST" duration-ms="247988" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase5 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:14:53 IST" name="tearDown" finished-at="2024-11-04T14:14:54 IST" duration-ms="710" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:14:54 IST" name="setUp" finished-at="2024-11-04T14:14:55 IST" duration-ms="1178" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase6()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:14:55 IST" name="TestCase6" finished-at="2024-11-04T14:19:20 IST" duration-ms="264444" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase6 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:19:20 IST" name="tearDown" finished-at="2024-11-04T14:19:20 IST" duration-ms="635" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:19:20 IST" name="setUp" finished-at="2024-11-04T14:19:21 IST" duration-ms="1196" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase7()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:19:21 IST" name="TestCase7" finished-at="2024-11-04T14:23:25 IST" duration-ms="243696" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase7 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:23:25 IST" name="tearDown" finished-at="2024-11-04T14:23:26 IST" duration-ms="827" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:23:26 IST" name="setUp" finished-at="2024-11-04T14:23:27 IST" duration-ms="1458" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase8()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:23:27 IST" name="TestCase8" finished-at="2024-11-04T14:28:10 IST" duration-ms="282672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase8 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:28:10 IST" name="tearDown" finished-at="2024-11-04T14:28:11 IST" duration-ms="634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:28:11 IST" name="setUp" finished-at="2024-11-04T14:28:12 IST" duration-ms="1220" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="TestCase9()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:28:12 IST" name="TestCase9" finished-at="2024-11-04T14:32:22 IST" duration-ms="250447" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase9 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:32:22 IST" name="tearDown" finished-at="2024-11-04T14:32:23 IST" duration-ms="782" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="Exit()[pri:0, instance:com.nucleus.qa.testcases.InfinityTestTele@c5dc4a2]" started-at="2024-11-04T14:32:23 IST" name="Exit" finished-at="2024-11-04T14:32:24 IST" duration-ms="853" status="PASS">
+        <test-method is-config="true" signature="Exit()[pri:0, instance:com.nucleus.qa.testcases.ExternalPortal@56de6d6b]" started-at="2025-01-28T19:37:07 IST" name="Exit" finished-at="2025-01-28T19:37:08 IST" duration-ms="445" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Exit -->
-      </class> <!-- com.nucleus.qa.testcases.InfinityTestTele -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.nucleus.qa.testcases.ExternalPortal -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

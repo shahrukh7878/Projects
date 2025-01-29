@@ -3,15 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.nucleus.qa.testcases.InfinityTest">
+      <class name="com.nucleus.qa.testcases.SignUp">
         <methods>
-          <include name="TestCase6"/>
+          <include name="TestCase1"/>
+          <include name="tearDown"/>
+          <include name="Exit"/>
           <include name="setUp"/>
           <include name="start"/>
-          <include name="Exit"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.nucleus.qa.testcases.InfinityTest -->
+      </class> <!-- com.nucleus.qa.testcases.SignUp -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

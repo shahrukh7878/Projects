@@ -141,6 +141,7 @@ public class CoreSystemTesting extends TestBase  {
 		
 		@BeforeMethod
 		public void setUp() throws IOException {
+			
 			initialization();
 		    loginPage = new LoginPage();
 			testutil = new TestUtil();
@@ -157,12 +158,14 @@ public class CoreSystemTesting extends TestBase  {
 			InfinityHome = new InfinityHomePage();
 			InfinityNewProposal=new InfinityNewProposalPage();
 			 d = new datadriven();	 
+			 
 		}
 		
 		@Test(enabled=true)
 		public void TestCase1() throws Exception  {
 			 test1 = extent.createTest("Test Case 1", "Nucleus Website");
 			try{
+			
 	        driver.get("https://nucleuscommercialfinance.com/");
 	        new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Find out more')]"))).isDisplayed();
 			driver.findElement(By.xpath("//a[contains(text(),'Find out more')]")).click();
@@ -361,7 +364,6 @@ public class CoreSystemTesting extends TestBase  {
 					
 				}
 				
-	         
 	        }
 		}
 		
@@ -408,6 +410,8 @@ public class CoreSystemTesting extends TestBase  {
 			executor1.executeScript("arguments[0].click();", element1);
 			((JavascriptExecutor)driver).executeScript("scroll(0,800)");
 			
+			
+
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'*Please fill in your First Name.')]"))).isDisplayed();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'*Please fill in your Last Name.')]"))).isDisplayed();
 			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'*Please fill in your correct Email.')]"))).isDisplayed();
@@ -533,6 +537,8 @@ public class CoreSystemTesting extends TestBase  {
 				            Screenshot();
 							WriteExtentReport =test1.createNode("Navigate to Failed Page");
 							WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"fail"+Error1);
+							
+							
 						}	
 				}
 				
@@ -543,131 +549,128 @@ public class CoreSystemTesting extends TestBase  {
 		public void TestCase3() throws Exception {
 			 test1 = extent.createTest("Test Case 3", "mypulse.io Website");
 			 try {
+				 
 			          driver.get("https://mypulse.io/");
-			          new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Login ')]"))).isDisplayed();
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/login?register=1']"))).isDisplayed();
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();
+			          new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Login')]"))).isDisplayed();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Integrations')]"))).isDisplayed();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Pricing')])[1]"))).isDisplayed();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Resources')])[1]"))).isDisplayed();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Who Am I?')]"))).isDisplayed();
+				     // new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Sign up')]"))).isDisplayed();
+				      
 				      Sleep(3000);
 				      Screenshot();
 				      WriteExtentReport =test1.createNode("Navigate to Application landing page");
 				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-				      driver.findElement(By.xpath("(//a[contains(text(),'Sign up')])[1]")).click();
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(text(),'Who am I?')]"))).isDisplayed();
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Register')]"))).isDisplayed();
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Resources')])[1]"))).isDisplayed();
+					     
+				      Actions actions = new Actions(driver);
+				       
+				    	WebElement menuOption = driver.findElement(By.xpath("(//a[contains(text(),'Resources')])[1]"));
+				    	
+				    	actions.moveToElement(menuOption).perform();
+				      //driver.findElement(By.xpath("(//a[contains(text(),'Resources')])[1]")).click();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Blog')])[1]"))).isDisplayed();
+				      driver.findElement(By.xpath("(//a[contains(text(),'Blog')])[1]")).click();
+				      
 				      Sleep(3000);
 				      Screenshot();
-				      WriteExtentReport =test1.createNode("Navigate to Sign up page");
+				      WriteExtentReport =test1.createNode("Navigate to Blog page");
 				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-				      driver.navigate().back();
-                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();//
-				      driver.findElement(By.xpath("(//div[@class='navver'])[1]")).click();
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Who Am I?')]"))).isDisplayed();
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Read Blog')]"))).isDisplayed();
+				      driver.findElement(By.xpath("//span[contains(text(),'Read Blog')]")).click();
+				      
+				      Sleep(3000);
+				      Screenshot();
+				      WriteExtentReport =test1.createNode("Navigate to Read Blog page");
+				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+				      
+				      Actions actions1 = new Actions(driver);
+				    	WebElement menuOption1 = driver.findElement(By.xpath("//a[contains(text(),'Company')]"));
+				    	actions.moveToElement(menuOption1).perform();
+				     // driver.findElement(By.xpath("//a[contains(text(),'Company')]")).click();
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'About us')])[1]"))).isDisplayed();
+				      driver.findElement(By.xpath("(//a[contains(text(),'About us')])[1]")).click();
+				      
+				      Sleep(3000);
+				      Screenshot();
+				      WriteExtentReport =test1.createNode("Navigate to About us page");
+				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+				      Actions actions2 = new Actions(driver);
+				    	WebElement menuOption2 = driver.findElement(By.xpath("//a[contains(text(),'Company')]"));
+				    	actions.moveToElement(menuOption2).perform();
+				     
+				    	
+				      
+				      //driver.findElement(By.xpath("//a[contains(text(),'Company')]")).click();
+				      
 				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Contact us')])[1]"))).isDisplayed();
+				      driver.findElement(By.xpath("(//a[contains(text(),'Contact us')])[1]")).click();
+				      
 				      Sleep(3000);
 				      Screenshot();
-				      WriteExtentReport =test1.createNode("Navigate to Who Am I page");
+				      WriteExtentReport =test1.createNode("Navigate to Contact us page");
 				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-				      driver.navigate().back();
-                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();		      
-                      driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
-                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Contact Us')]"))).isDisplayed();
-                      driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='navver'])[2]"))).isDisplayed();				     
-				      driver.findElement(By.xpath("(//div[@class='navver'])[2]")).click();				    
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'GET IN TOUCH')]"))).isDisplayed();				      
-				      driver.findElement(By.xpath("//span[contains(text(),'GET IN TOUCH')]")).click();		      
-				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[1]"))).isDisplayed();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[2]"))).isDisplayed();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[3]"))).isDisplayed();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[4]"))).isDisplayed();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[5]"))).isDisplayed();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[6]"))).isDisplayed();
-					  Sleep(3000);
-					  Screenshot();
-					  WriteExtentReport =test1.createNode("Navigate to Contact Us page");
-					  WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-					  driver.navigate().back();
-					  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();
-				      Sleep(5000);
-				      JavascriptExecutor js = (JavascriptExecutor) driver;
-				      js.executeScript("window.scrollBy(0,600)");
-				       Sleep(5000);
-				       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'What do you get with Pulse?')]"))).isDisplayed();
-					   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Learn more')])[2]"))).isDisplayed();
-					   Sleep(3000);
-					   Screenshot();
-					   WriteExtentReport =test1.createNode("Navigate to What Do You Get With Pulse Page");
-					   WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-					   JavascriptExecutor js1 = (JavascriptExecutor) driver;
-					   js1.executeScript("window.scrollBy(0,1400)");
-					   Sleep(5000);
-					   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//h2[contains(text(),'Spot opportunities and issues in seconds')])"))).isDisplayed();
-					   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Learn more')])[2]"))).isDisplayed();
-					   Sleep(3000);
-					   Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Spot Opportunities And Issues In Seconds Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						Sleep(5000);
-						JavascriptExecutor js2 = (JavascriptExecutor) driver;
-						js2.executeScript("window.scrollBy(0,800)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Secure, seriously simple')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Understand Open Banking')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Secure, Seriously Simple Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js3 = (JavascriptExecutor) driver;
-						js3.executeScript("window.scrollBy(0,1300)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Like X-ray vision for your business')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Take your firm further')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Like X-ray Vision For Your Business Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js4 = (JavascriptExecutor) driver;
-						js4.executeScript("window.scrollBy(0,800)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Some of our ')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//em[contains(text(),'accounting')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'SOME OF OUR INTEGRATIONS')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Understand Open Accounting')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Some Of Our Accounting Integrations Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js5 = (JavascriptExecutor) driver;
-						js5.executeScript("window.scrollBy(0,1400)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Bring your clients up to speed')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Accountants')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Bring Your Clients Up To Speed Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js6 = (JavascriptExecutor) driver;
-						js6.executeScript("window.scrollBy(0,1400)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Get started in seconds')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Businesses')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Get Started In Seconds Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js7 = (JavascriptExecutor) driver;
-						js7.executeScript("window.scrollBy(0,1800)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Fast-track funding decisions')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Brokers')]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Fast-Track Funding Decisions Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						JavascriptExecutor js8 = (JavascriptExecutor) driver;
-						js8.executeScript("window.scrollBy(0,1900)");
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Keep your finger on the ')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//em[contains(text(),'pulse')]"))).isDisplayed();
-						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Join the revolution')])[1]"))).isDisplayed();
-						Sleep(6000);
-						Screenshot();
-						WriteExtentReport =test1.createNode("Navigate to Keep Your Finger On The Pulse Of Your Business Today Page");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-						MypulseWebsite="Working";
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Login')]"))).isDisplayed();
+					     
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+				      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+				     
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'SMEs')]"))).isDisplayed();
+				      driver.findElement(By.xpath("//button[contains(text(),'SMEs')]")).click();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For SMEs')]"))).isDisplayed();
+					    
+				      
+				      Sleep(3000);
+				      Screenshot();
+				      WriteExtentReport =test1.createNode("Navigate to SMEs page");
+				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				      
+				     
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+				      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+				     
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Banks & Lenders')]"))).isDisplayed();
+				      driver.findElement(By.xpath("//button[contains(text(),'Banks & Lenders')]")).click();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For Banks & Lenders')]"))).isDisplayed();
+				      
+				      
+				      Sleep(3000);
+				      Screenshot();
+				      WriteExtentReport =test1.createNode("Navigate to Banks & Lenders page");
+				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				      
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+				      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+				     
+				      
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Accountants')]"))).isDisplayed();
+				      driver.findElement(By.xpath("//button[contains(text(),'Accountants')]")).click();
+				      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For Accountants')]"))).isDisplayed();
+					     
+				      Sleep(3000);
+				      Screenshot();
+				      WriteExtentReport =test1.createNode("Navigate to Accountants page");
+				      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+				     
+				      			MypulseWebsite="Working";
 			 }
 			 
 			catch(Exception e) {
@@ -682,133 +685,109 @@ public class CoreSystemTesting extends TestBase  {
 					if(MypulseWebsite=="Not Working") {
 						
 						 try {
-							    initialization();
-							     test1 = extent.createTest("Test Case 3", "mypulse.io Website");
+							      initialization();
 						          driver.get("https://mypulse.io/");
-						          new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Login ')]"))).isDisplayed();
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/login?register=1']"))).isDisplayed();
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();
+						          new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Login')]"))).isDisplayed();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Integrations')]"))).isDisplayed();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Pricing')])[1]"))).isDisplayed();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Resources')])[1]"))).isDisplayed();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Who Am I?')]"))).isDisplayed();
+							     // new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Sign up')]"))).isDisplayed();
+							      
 							      Sleep(3000);
 							      Screenshot();
 							      WriteExtentReport =test1.createNode("Navigate to Application landing page");
 							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-							      driver.findElement(By.xpath("(//a[contains(text(),'Sign up')])[1]")).click();
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(text(),'Who am I?')]"))).isDisplayed();
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Register')]"))).isDisplayed();
+							      driver.findElement(By.xpath("(//a[contains(text(),'Resources')])[1]")).click();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Blog')])[1]"))).isDisplayed();
+							      driver.findElement(By.xpath("(//a[contains(text(),'Blog')])[1]")).click();
+							      
 							      Sleep(3000);
 							      Screenshot();
-							      WriteExtentReport =test1.createNode("Navigate to Sign up page");
+							      WriteExtentReport =test1.createNode("Navigate to Blog page");
 							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-							      driver.navigate().back();
-			                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();
-							      driver.findElement(By.xpath("(//div[@class='navver'])[1]")).click();
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Who Am I?')]"))).isDisplayed();
+							      
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Read Blog')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//span[contains(text(),'Read Blog')]")).click();
+							      
+							      Sleep(3000);
+							      Screenshot();
+							      WriteExtentReport =test1.createNode("Navigate to Read Blog page");
+							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+							      
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//a[contains(text(),'Company')]")).click();
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'About us')])[1]"))).isDisplayed();
+							      driver.findElement(By.xpath("(//a[contains(text(),'About us')])[1]")).click();
+							      
+							      Sleep(3000);
+							      Screenshot();
+							      WriteExtentReport =test1.createNode("Navigate to About us page");
+							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+							      
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Company')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//a[contains(text(),'Company')]")).click();
+							      
 							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Contact us')])[1]"))).isDisplayed();
+							      driver.findElement(By.xpath("(//a[contains(text(),'Contact us')])[1]")).click();
+							      
 							      Sleep(3000);
 							      Screenshot();
-							      WriteExtentReport =test1.createNode("Navigate to Who Am I page");
+							      WriteExtentReport =test1.createNode("Navigate to Contact us page");
 							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-							      driver.navigate().back();
-			                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();		      
-			                      driver.findElement(By.xpath("(//button[@type='button'])[1]")).click();
-			                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Contact Us')]"))).isDisplayed();
-			                      driver.findElement(By.xpath("(//button[@type='button'])[2]")).click();
-			                      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='navver'])[2]"))).isDisplayed();				     
-							      driver.findElement(By.xpath("(//div[@class='navver'])[2]")).click();				    
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'GET IN TOUCH')]"))).isDisplayed();				      
-							      driver.findElement(By.xpath("//span[contains(text(),'GET IN TOUCH')]")).click();		      
-							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[1]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[2]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[3]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[4]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[5]"))).isDisplayed();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'The field is required.')])[6]"))).isDisplayed();
-								  Sleep(3000);
-								  Screenshot();
-								  WriteExtentReport =test1.createNode("Navigate to Contact Us page");
-								  WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-								  driver.navigate().back();
-								  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sign up')])[1]"))).isDisplayed();
-							      Sleep(5000);
-							      JavascriptExecutor js = (JavascriptExecutor) driver;
-							      js.executeScript("window.scrollBy(0,600)");
-							       Sleep(5000);
-							       new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'What do you get with Pulse?')]"))).isDisplayed();
-								   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Learn more')])[2]"))).isDisplayed();
-								   Sleep(3000);
-								   Screenshot();
-								   WriteExtentReport =test1.createNode("Navigate to What Do You Get With Pulse Page");
-								   WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-								   JavascriptExecutor js1 = (JavascriptExecutor) driver;
-								   js1.executeScript("window.scrollBy(0,1400)");
-								   Sleep(5000);
-								   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//h2[contains(text(),'Spot opportunities and issues in seconds')])"))).isDisplayed();
-								   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Learn more')])[2]"))).isDisplayed();
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Spot Opportunities And Issues In Seconds Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									Sleep(5000);
-									JavascriptExecutor js2 = (JavascriptExecutor) driver;
-									js2.executeScript("window.scrollBy(0,800)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Secure, seriously simple')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Understand Open Banking')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Secure, Seriously Simple Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js3 = (JavascriptExecutor) driver;
-									js3.executeScript("window.scrollBy(0,1300)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Like X-ray vision for your business')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Take your firm further')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Like X-ray Vision For Your Business Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js4 = (JavascriptExecutor) driver;
-									js4.executeScript("window.scrollBy(0,800)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Some of our ')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//em[contains(text(),'accounting')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'SOME OF OUR INTEGRATIONS')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Understand Open Accounting')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Some Of Our Accounting Integrations Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js5 = (JavascriptExecutor) driver;
-									js5.executeScript("window.scrollBy(0,1400)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Bring your clients up to speed')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Accountants')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Bring Your Clients Up To Speed Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js6 = (JavascriptExecutor) driver;
-									js6.executeScript("window.scrollBy(0,1400)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Get started in seconds')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Businesses')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Get Started In Seconds Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js7 = (JavascriptExecutor) driver;
-									js7.executeScript("window.scrollBy(0,1800)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Fast-track funding decisions')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Discover Pulse for Brokers')]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Fast-Track Funding Decisions Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									JavascriptExecutor js8 = (JavascriptExecutor) driver;
-									js8.executeScript("window.scrollBy(0,1900)");
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Keep your finger on the ')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//em[contains(text(),'pulse')]"))).isDisplayed();
-									new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Join the revolution')])[1]"))).isDisplayed();
-									Sleep(6000);
-									Screenshot();
-									WriteExtentReport =test1.createNode("Navigate to Keep Your Finger On The Pulse Of Your Business Today Page");
-									WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-									MypulseWebsite="Working";
-						 }
+							      
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Login')]"))).isDisplayed();
+								     
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+							      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+							     
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'SMEs')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//button[contains(text(),'SMEs')]")).click();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For SMEs')]"))).isDisplayed();
+								    
+							      
+							      Sleep(3000);
+							      Screenshot();
+							      WriteExtentReport =test1.createNode("Navigate to SMEs page");
+							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+							      
+							     
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+							      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+							     
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Banks & Lenders')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//button[contains(text(),'Banks & Lenders')]")).click();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For Banks & Lenders')]"))).isDisplayed();
+							      
+							      
+							      Sleep(3000);
+							      Screenshot();
+							      WriteExtentReport =test1.createNode("Navigate to Banks & Lenders page");
+							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+							      
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@id='arrow-down']"))).isDisplayed();
+							      driver.findElement(By.xpath("//span[@id='arrow-down']")).click();
+							     
+							      
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Accountants')]"))).isDisplayed();
+							      driver.findElement(By.xpath("//button[contains(text(),'Accountants')]")).click();
+							      new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'For Accountants')]"))).isDisplayed();
+								     
+							      Sleep(3000);
+							      Screenshot();
+							      WriteExtentReport =test1.createNode("Navigate to Accountants page");
+							      WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+							     
+							      			MypulseWebsite="Working";				 }
 						 
 						catch(Exception e1) {
 							MypulseWebsite="Not Working";
@@ -863,11 +842,11 @@ public class CoreSystemTesting extends TestBase  {
 						 WriteExtentReport =test1.createNode("Navigate to Application landing page1");
 						 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 						 driver.findElement(By.xpath("//a[contains(text(),' NEW PROPOSAL')]")).click();
-						 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'New Proposal ')]"))).isDisplayed();
-						  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Business Information')]"))).isDisplayed();
-							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Loan Information')]"))).isDisplayed();
-							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Director Information')]"))).isDisplayed();
-							  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Documents')]"))).isDisplayed();
+					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'New Proposal ')]"))).isDisplayed();
+					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Business Information')]"))).isDisplayed();
+					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Loan Information')]"))).isDisplayed();
+					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Director Information')]"))).isDisplayed();
+				    new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//p[contains(text(),'Documents')]"))).isDisplayed();
 								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited Company')]"))).isDisplayed();
 								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited liability partnership')]"))).isDisplayed();
 								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.id("clearbtn"))).isDisplayed();
@@ -1972,8 +1951,10 @@ public class CoreSystemTesting extends TestBase  {
 							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Allied Irish(NI)')]"))).isDisplayed();
 							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Bank of Scotland Commercial')]"))).isDisplayed();
 							new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Barclays Corporate')]"))).isDisplayed();
+							
 							Sleep(3000);
-							Screenshot(); 
+							Screenshot();
+							
 							WriteExtentReport =test1.createNode("Navigate OPEN BANKING STATUS Page ");
 							WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 								new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),' OPEN ACCOUNTING STATUS')]"))).isDisplayed();
@@ -1982,7 +1963,8 @@ public class CoreSystemTesting extends TestBase  {
 										   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Dynamics 365 Business Central')]"))).isDisplayed();
 										   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'QuickBooks Desktop')]"))).isDisplayed();
 										   new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'Wave')]"))).isDisplayed();
-										Sleep(3000);
+										     
+										   Sleep(3000);
 											 Screenshot();
 											 WriteExtentReport =test1.createNode("Navigate to OPEN ACCOUNTING STATUS Page");
 											 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
@@ -1992,6 +1974,9 @@ public class CoreSystemTesting extends TestBase  {
 											  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'SEARCH')]"))).isDisplayed();
 												new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='date_range_apr']"))).isDisplayed();
 												new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//select[@id='agent'])[2]"))).isDisplayed();
+												 
+												
+												
 												Sleep(3000);
 												 Screenshot();
 												 WriteExtentReport =test1.createNode("Navigate to BDM PERFORMANCE Page");
@@ -2001,6 +1986,8 @@ public class CoreSystemTesting extends TestBase  {
 												 new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'SIC Codes')]"))).isDisplayed();
 												  new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@name='Sic_Segment_ID']"))).isDisplayed();
 													new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Search')]"))).isDisplayed();
+													
+													
 													Sleep(3000);
 													 Screenshot();
 													 WriteExtentReport =test1.createNode("Navigate to SIC Codes Page");
@@ -2037,7 +2024,7 @@ public class CoreSystemTesting extends TestBase  {
 			    driver.get("https://www.myfundingportal.co.uk/login");
 				Sleep(3000);
 				 Screenshot(); 
-					WriteExtentReport =test1.createNode("Navigate Login Page ");
+				    WriteExtentReport =test1.createNode("Navigate Login Page ");
 					WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");				
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Sign in')]"))).isDisplayed();
 				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("shahrukh.aatar@mypulse.io");
@@ -2275,8 +2262,8 @@ public class CoreSystemTesting extends TestBase  {
 				driver.get("https://www.myfundingportal.co.uk/login");
 					Sleep(3000);
 					 Screenshot(); 
-						WriteExtentReport =test1.createNode("Navigate Login Page ");
-						WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");			
+					WriteExtentReport =test1.createNode("Navigate Login Page ");
+					WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");			
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),'Sign in')]"))).isDisplayed();
 					driver.findElement(By.xpath("//input[@id='email']")).sendKeys("eric.raisinghani@nucleus-cf.co.uk");
 					driver.findElement(By.xpath("//input[@id='password']")).sendKeys("ncfadmin@01");
@@ -2296,7 +2283,7 @@ public class CoreSystemTesting extends TestBase  {
 					WriteExtentReport =test1.createNode("Navigate After Login Page ");
 					WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 					JavascriptExecutor js = (JavascriptExecutor) driver;
-				      js.executeScript("window.scrollBy(0,600)");
+				    js.executeScript("window.scrollBy(0,600)");
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'All Deals By Quarter')]"))).isDisplayed();
 						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'All Deals By Product')]"))).isDisplayed();
 						new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[contains(text(),'Paid Out Deals By Broker')]"))).isDisplayed();
@@ -2760,7 +2747,7 @@ public class CoreSystemTesting extends TestBase  {
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='password']"))).isDisplayed();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='login']"))).isDisplayed();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Forgot password?')]"))).isDisplayed();
-				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("anil.jain@nucleus-cf.co.uk");
+				driver.findElement(By.xpath("//input[@id='email']")).sendKeys("anil.jain@mypulse.io");
 				driver.findElement(By.xpath("//input[@id='password']")).sendKeys("mycollection@123");
 				driver.findElement(By.xpath("//input[@id='login']")).click();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.className("welcometext"))).isDisplayed();
@@ -2840,7 +2827,9 @@ public class CoreSystemTesting extends TestBase  {
 				 Screenshot();
 				 WriteExtentReport =test1.createNode("Navigate to ADMIN Page");
 				 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-			 	driver.findElement(By.xpath("//i[@class='fas fa-sign-out-alt']//parent::a")).click();//Logout
+				 ((JavascriptExecutor)driver).executeScript("scroll(0,900)");
+				 Sleep(3000);
+			 	driver.findElement(By.xpath("//li[@class='active']/following-sibling::li")).click();//Logout
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='myCollection']"))).isDisplayed();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),' Sign in')]"))).isDisplayed();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']"))).isDisplayed();
@@ -2851,7 +2840,10 @@ public class CoreSystemTesting extends TestBase  {
 				 Screenshot();
 				 WriteExtentReport =test1.createNode("Navigate to After Logout Page");
 				 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-				Mycollection="Working";		
+				 
+				Mycollection="Working";	
+				
+				
 		}
 		catch(Exception e) {
 			Mycollection="Not Working";
@@ -2877,7 +2869,7 @@ public class CoreSystemTesting extends TestBase  {
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='password']"))).isDisplayed();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='login']"))).isDisplayed();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Forgot password?')]"))).isDisplayed();
-					driver.findElement(By.xpath("//input[@id='email']")).sendKeys("anil.jain@nucleus-cf.co.uk");
+					driver.findElement(By.xpath("//input[@id='email']")).sendKeys("anil.jain@mypulse.io");
 					driver.findElement(By.xpath("//input[@id='password']")).sendKeys("mycollection@123");
 					driver.findElement(By.xpath("//input[@id='login']")).click();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.className("welcometext"))).isDisplayed();
@@ -2953,11 +2945,16 @@ public class CoreSystemTesting extends TestBase  {
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'ADMIN')]"))).isDisplayed();//ADMIN
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'All Users')]"))).isDisplayed();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='search']"))).isDisplayed();//search field
+					
+					
 					Sleep(3000);
 					 Screenshot();
 					 WriteExtentReport =test1.createNode("Navigate to ADMIN Page");
 					 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-				 	driver.findElement(By.xpath("//i[@class='fas fa-sign-out-alt']//parent::a")).click();//Logout
+					 
+					 ((JavascriptExecutor)driver).executeScript("scroll(0,900)");
+					 Sleep(3000);
+				 	driver.findElement(By.xpath("//li[@class='active']/following-sibling::li")).click();//Logout
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='myCollection']"))).isDisplayed();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[contains(text(),' Sign in')]"))).isDisplayed();
 					new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']"))).isDisplayed();
@@ -3073,7 +3070,7 @@ public class CoreSystemTesting extends TestBase  {
 				action.moveToElement(element3).build().perform();
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Outsourced Deals Matrix')])"))).isDisplayed();//Assign Agent
 				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Outsourced Deals Details')])"))).isDisplayed();//Assign Agent
-				Sleep(3000);
+				 Sleep(3000);
 				 Screenshot();
 				 WriteExtentReport =test1.createNode("Navigate to Collections Page");
 				 WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
@@ -3257,11 +3254,15 @@ public class CoreSystemTesting extends TestBase  {
 		@AfterMethod
 		public void tearDown() throws Exception {
 			driver.quit();
+			
 		   }
+		
+		
 		
 		@AfterSuite
 		public void Exit() throws IOException {
 			extent.flush();
+			//String path = "C:\\Users\\ShahrukhAata_l4\\Project\\Test\\TestData\\TestData.xls";
 			WriteCode RC=new WriteCode();
 			RC.Write(NucleusWebsite, InfinityFundingWebsite, MypulseWebsite, MyNucleusPortalBroker, MyNucleusPortalAdmin, InfinityPortalDirectRoleBroker, InfinityPortalTeleRoleBroker, InfinityPortalDirectRoleAdmin, InfinityPortalTeleRoleAdmin, Mycollection, MyReportingPortal, MyAdminPortal);
 		}

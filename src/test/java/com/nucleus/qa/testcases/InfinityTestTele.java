@@ -52,7 +52,6 @@ public class InfinityTestTele extends TestBase{
 	ExtentTest test1,test2;	
 	NewProposalPage newproposalpage;
 	LoanInformationPage LoanInfo;
-	
 	DirectorInformationPage DirectorInformation;
 	DocumentsPage Documents;
 	NucleusSaleforcePage NucleusSaleforce;
@@ -62,15 +61,11 @@ public class InfinityTestTele extends TestBase{
 	TestUtil testutil;
 	TestBase TestBaseMethod;
 	
-	
-	
-	
-	
+
 	
 	static ExtentTest WriteExtentReport;
 	datadriven d;
 	String path = "C:\\Users\\ShahrukhAata_l4\\Project\\Test\\TestData\\TestDataInfinity.xls";
-	
 	@BeforeSuite
 	public void start() { 
 	
@@ -96,10 +91,7 @@ public class InfinityTestTele extends TestBase{
 		String sScreenshotFilename = sDate.getHours()+"_"+sDate.getMinutes()+"_"+sDate.getSeconds();
 		FilePath = Datepath + "/" + sScreenshotFilename;
 		// String path = System.getProperty("user.dir")+ "\\reports\\"+Datepath+"\\index.html";
-		
-		
          // File DestFile=new File(FilePath);
-		
 		 // Files.copy(path.toPath(), DestFile.toPath());
          ExtentSparkReporter reporter=new ExtentSparkReporter(FilePath);
          reporter.config().setReportName("Web Automation Results");
@@ -171,7 +163,7 @@ public class InfinityTestTele extends TestBase{
 	
 	
 	
-	@Test(enabled=true)
+	@Test(enabled=false)
 	public void TestCase1() throws Exception  {
 		
 		 test1 = extent.createTest("Test Case 1", "InfinityTestCase ");
@@ -593,10 +585,10 @@ public class InfinityTestTele extends TestBase{
 				Sleep(5000);
 				driver.findElement(By.id("edit_3")).click();
 				
-				//DirectorInformation.EditShareholderDetails1();
+				DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -621,7 +613,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -645,7 +637,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -796,7 +788,6 @@ public class InfinityTestTele extends TestBase{
 	}
 	
 	
-
 	
 	
 	@Test(enabled=true)
@@ -1224,7 +1215,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -1249,7 +1240,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -1273,7 +1264,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -1851,7 +1842,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -1876,7 +1867,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -1900,7 +1891,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -2479,7 +2470,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -2504,7 +2495,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -2528,7 +2519,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -3106,7 +3097,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -3131,7 +3122,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -3155,7 +3146,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -3733,7 +3724,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -3758,7 +3749,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -3782,7 +3773,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -4360,7 +4351,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -4385,7 +4376,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -4409,7 +4400,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -4559,8 +4550,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
 	
 	@Test(enabled=true)
 	public void TestCase8() throws Exception  {
@@ -4987,7 +4976,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -5012,7 +5001,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -5036,7 +5025,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -5613,7 +5602,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -5638,7 +5627,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -5662,7 +5651,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -5812,9 +5801,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
-	
 	
 	@Test(enabled=true)
 	public void TestCase10() throws Exception  {
@@ -6241,7 +6227,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -6266,7 +6252,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -6290,7 +6276,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -6440,10 +6426,8 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
-	
-	
+		
+
 	@Test(enabled=true)
 	public void TestCase11() throws Exception  {
 		
@@ -6869,7 +6853,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -6894,7 +6878,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -6918,7 +6902,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -7068,8 +7052,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
 	
 	
 	@Test(enabled=true)
@@ -7497,7 +7479,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -7522,7 +7504,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -7546,7 +7528,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -7696,8 +7678,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
 	
 	
 	@Test(enabled=true)
@@ -8125,7 +8105,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -8150,7 +8130,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -8174,7 +8154,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -8324,9 +8304,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
-	
-	
 	
 	@Test(enabled=true)
 	public void TestCase14() throws Exception  {
@@ -8753,7 +8730,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -8778,7 +8755,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -8802,7 +8779,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -8822,8 +8799,6 @@ public class InfinityTestTele extends TestBase{
 		        {  
 		            System.out.println(e);  
 		        }
-			
-		
 				Sleep(3000);
 				Screenshot();
 				WriteExtentReport =test1.createNode("Navigate to Shareholder Details page 2");
@@ -8952,7 +8927,6 @@ public class InfinityTestTele extends TestBase{
         }
 	}
 
-	
 	
 	
 	@Test(enabled=true)
@@ -9380,7 +9354,7 @@ public class InfinityTestTele extends TestBase{
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -9405,7 +9379,7 @@ public class InfinityTestTele extends TestBase{
 		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			DirectorInformation.DateofBirth(BirthDay1);
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -9429,7 +9403,7 @@ public class InfinityTestTele extends TestBase{
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);

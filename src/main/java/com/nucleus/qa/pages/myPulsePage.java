@@ -150,7 +150,7 @@ public myPulsePage() {
 	  }
      
      public void ClickOnSubmit() {
-    	 ClickOnSubmit.click();
+    	 ClickOnSubmit.click(); 
 	  }
      
      public void VerifyMessage() {

@@ -3,23 +3,32 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-       <!-- <class name="com.nucleus.qa.testcases.LoginPageTest2">-->
-		<class name="com.nucleus.qa.testcases.InfinityTest">
-		  <methods> 
+        <!--<class name="com.nucleus.qa.testcases.InfinityTestTele">-->
+		<class name="com.nucleus.qa.testcases.ExternalPortal">
+		 <!--<class name="com.nucleus.qa.testcases.InfinityTest">-->
+		 <!--<class name="com.nucleus.qa.testcases.SignUp">-->
+		  <methods>
 			  <include name="TestCase1">
 			  </include>
-			  <include name="TestCase2">
-			  </include>
-			  <include name="TestCase3">
-			  </include>
-			  <include name="TestCase4">
-			  </include>
-			  <include name="TestCase5">
-			  </include>
-			  <include name="TestCase6">
-			  </include>
+			  <exclude name="TestCase2">
+			  </exclude>
+			  <exclude name="TestCase3">
+			  </exclude>
+			   <exclude name="TestCase4">
+			  </exclude>
+			   <exclude name="TestCase5">
+			  </exclude>
+			  <exclude name="TestCase6">
+			  </exclude>
+			  <exclude name="TestCase8">
+			  </exclude>
+			  <exclude name="TestCase9">
+			  </exclude>
+			  <exclude name="TestCase10">
+			  </exclude>
 		  </methods>
       </class>
     </classes>
+
   </test> <!-- Test -->
 </suite> <!-- Suite -->

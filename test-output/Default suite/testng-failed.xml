@@ -3,15 +3,39 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.nucleus.qa.testcases.Login1">
+      <class name="com.nucleus.qa.testcases.SignUp">
         <methods>
-          <include name="tearDown"/>
-          <include name="Exit"/>
-          <include name="start"/>
-          <include name="setUp"/>
+          <include name="TestCase5"/>
+          <include name="TestCase23"/>
+          <include name="TestCase9"/>
+          <include name="TestCase22"/>
           <include name="TestCase2"/>
+          <include name="TestCase21"/>
+          <include name="TestCase3"/>
+          <include name="TestCase20"/>
+          <include name="TestCase4"/>
+          <include name="TestCase6"/>
+          <include name="TestCase25"/>
+          <include name="TestCase24"/>
+          <include name="TestCase7"/>
+          <include name="TestCase8"/>
+          <include name="TestCase1"/>
+          <include name="tearDown"/>
+          <include name="start"/>
+          <include name="TestCase19"/>
+          <include name="TestCase18"/>
+          <include name="Exit"/>
+          <include name="TestCase17"/>
+          <include name="setUp"/>
+          <include name="TestCase12"/>
+          <include name="TestCase11"/>
+          <include name="TestCase10"/>
+          <include name="TestCase16"/>
+          <include name="TestCase15"/>
+          <include name="TestCase14"/>
+          <include name="TestCase13"/>
         </methods>
-      </class> <!-- com.nucleus.qa.testcases.Login1 -->
+      </class> <!-- com.nucleus.qa.testcases.SignUp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

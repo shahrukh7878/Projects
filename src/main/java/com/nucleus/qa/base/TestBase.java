@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.io.FileOutputStream;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -57,7 +58,7 @@ import java.io.FileInputStream;
 
 import java.io.FileNotFoundException;
 
-import java.io.FileOutputStream;
+
 
 import java.io.IOException;
 
@@ -107,20 +108,13 @@ public class TestBase{
 	
 	public static void CaptureScreenshot() throws AWTException
     {
-
-
                 try {
-                            TakesScreenshot ts=(TakesScreenshot)driver;
+                           TakesScreenshot ts=(TakesScreenshot)driver;
                             File source=ts.getScreenshotAs(OutputType.FILE);
                             FileUtils.copyFile(source, new File("C:\\Users\\Documents\\Eclipse\\WorkSpace\\ScreenShot\\"));
-
                             System.out.println("Screenshot taken");
-
-
                 } catch (Exception e) {
-
                             System.out.println("Exception "+e.getMessage());
-
                 }            
     }
 	
@@ -136,7 +130,7 @@ public class TestBase{
 	
 	public  void switchToWindow(String windowTitle) {
 	    Set<String> windows = driver.getWindowHandles();
-	    for (String window : windows) {
+	    for(String window : windows) {
 	        driver.switchTo().window(window);
 	        if (driver.getTitle().contains(windowTitle)) {
 	            return;
@@ -150,8 +144,6 @@ public class TestBase{
 		// Now you can do whatever you need to do with it, for example copy somewhere
 		FileUtils.copyFile(scrFile, new File("C:\\Users\\ShahrukhAatar\\OneDrive - Nucleus Services Ltd\\Documents\\Automation\\MyNucleusTest\\test-output\\screenshot.png"));
 		//DirectorInformation.SecondDirectorResidentialPropertyYes();
-		
-		
 	}
 	
 	
@@ -163,11 +155,8 @@ public class TestBase{
 		System.setProperty("webdriver.edge.driver", "C://Users//ShahrukhAata_l4//Project//Test//driver//edgedriver_win64//msedgedriver.exe");
 		driver = new EdgeDriver();
 		//WebDriver driver = new EdgeDriver();
-		
 		/*String browserName=prop.getProperty("browser");
 		 * 
-		 
-		
 		if(browserName.equals("edge")) {
 			System.setProperty("webdriver.edge.driver", "C://Users//ShahrukhAatar//Downloads//edgedriver_win64//msedgedriver.exe");
 			driver = new EdgeDriver();
@@ -180,9 +169,9 @@ public class TestBase{
 	    }*/
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(90, TimeUnit.SECONDS);
-		driver.manage().timeouts().setScriptTimeout(90, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(90,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(180, TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
 }
 	public static void initializationoffice() {
 		
@@ -204,9 +193,9 @@ public class TestBase{
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
 		//driver.get(prop.getProperty("url"));
 		//driver.get("https://myfunding.ncf-sandbox.com/");
 	}
@@ -365,7 +354,7 @@ public class TestBase{
 	public static  String Screenshot() throws Exception {
 		
 		path = System.getProperty("user.dir") + "/Reports and Screenshots";
-		 	//String path="C:\\Users\\ShahrukhAatar\\OneDrive - Nucleus Services Ltd\\Documents\\Automation\\MyNucleusTest\\Screenshot";
+		//String path="C:\\Users\\ShahrukhAatar\\OneDrive - Nucleus Services Ltd\\Documents\\Automation\\MyNucleusTest\\Screenshot";
 		//String path = Basepathet;//globalIdentifiers.Basepath + "Reports and Screenshots";
 		Calendar cal = Calendar.getInstance();
 		File Dir = new File(path);

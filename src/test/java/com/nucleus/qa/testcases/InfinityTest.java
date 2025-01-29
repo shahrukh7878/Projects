@@ -63,17 +63,15 @@ public class InfinityTest extends TestBase{
 	TestBase TestBaseMethod;
 	
 	
-	
-	
-	
-	
 	static ExtentTest WriteExtentReport;
 	datadriven d;
 	String path = "C:\\Users\\ShahrukhAata_l4\\Project\\Test\\TestData\\TestDataInfinity.xls";
 	
+	
 	@BeforeSuite
 	public void start() { 
-	
+		
+		
 		String  path2 = System.getProperty("user.dir")+ "\\reports\\Infinity.html";
 	//	ExtentSparkReporter esp=new ExtentSparkReporter(System.getProperty("user.dir")+"/ExtentReport/ExtentReports_"+destDir+"/SwarupExtentReport.html");
 		Calendar cal = Calendar.getInstance();
@@ -96,18 +94,13 @@ public class InfinityTest extends TestBase{
 		String sScreenshotFilename = sDate.getHours()+"_"+sDate.getMinutes()+"_"+sDate.getSeconds();
 		FilePath = Datepath + "/" + sScreenshotFilename;
 		// String path = System.getProperty("user.dir")+ "\\reports\\"+Datepath+"\\index.html";
-		
-		
          // File DestFile=new File(FilePath);
-		
 		 // Files.copy(path.toPath(), DestFile.toPath());
          ExtentSparkReporter reporter=new ExtentSparkReporter(FilePath);
          reporter.config().setReportName("Web Automation Results");
 		 reporter.config().setDocumentTitle("TestResult");
 		 extent = new ExtentReports();
-	     extent.attachReporter(reporter);
-	     
-	     
+	     extent.attachReporter(reporter);  
 	}
 	
 	@BeforeMethod
@@ -135,12 +128,11 @@ public class InfinityTest extends TestBase{
 	/*@Test
 	public void InfinityTest() throws IOException
 	{
-		
+
 		//FileInputStream fis = new FileInputStream("C:/Users/ShahrukhAatar/Documents/TestData.xlsx");
 		//XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		
 		//ExtentTest test= extent.createTest("TestCase");
-		
 		/*InfinityLogin.login();
 		InfinityHome.NewProposal();
 		InfinityNewProposal.EnterInfinityFundingProposal();
@@ -172,6 +164,7 @@ public class InfinityTest extends TestBase{
 	public void TestCase1() throws Exception  {
 		
 		 test1 = extent.createTest("Test Case 1", "InfinityTestCase ");
+		 
 	
 		try {
 				
@@ -197,7 +190,6 @@ public class InfinityTest extends TestBase{
 		String Fund = (String) data.get(16);
 		String Months = (String) data.get(17);
 		String Percent = (String) data.get(18);
-		
 		
 		String BirthDay1= (String) data.get(19);
 		String Email1 = (String) data.get(20);
@@ -228,7 +220,7 @@ public class InfinityTest extends TestBase{
 		String DirectorLastName = (String) data.get(36);
 		
 		
-driver.get(Saleforceurl);
+        driver.get(Saleforceurl);
 		
 		Sleep(3000);
 		Screenshot();
@@ -267,7 +259,7 @@ driver.get(Saleforceurl);
 		}
 		catch(Exception e)
 		{
-			
+
 		}
 		NucleusSaleforce.ClickOnLeadtab();
 		NucleusSaleforce.ClickOnNewbutton();
@@ -277,26 +269,25 @@ driver.get(Saleforceurl);
 		WriteExtentReport =test1.createNode("Navigate to Create Lead Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
       
-		
-		NucleusSaleforce.ClickOnContinue();
+	    NucleusSaleforce.ClickOnContinue();
 		NucleusSaleforce.EnterFirstName(DirectorFirstName);
 		NucleusSaleforce.EnterLastName(DirectorLastName);
 		NucleusSaleforce.SelectLeadSource();
 		NucleusSaleforce.SelectLeadSourceInformation();
 		NucleusSaleforce.EnterCompanyName(CompanyName);
+		Sleep(3000);
+		//driver.findElement(By.xpath("//input[@id='lea21']")).click();
+		
+		
 		NucleusSaleforce.ClickOnSavebutton();
 		
 		Sleep(3000);
 		Screenshot();
 		WriteExtentReport =test1.createNode("Navigate to Lead Sucssesfully Create Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-      
-	
-		String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
+		//String URL="https://myfunding.ncf-sandbox.com/deleteCompanyData/"+CRN;
 		
-		
-		
-		driver.get(URL);
+		//driver.get(URL);
 		Sleep(3000);
 		driver.get(url);
 		Screenshot();
@@ -304,6 +295,7 @@ driver.get(Saleforceurl);
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 		
 		InfinityLogin.login(Username,Password);
+		
 		
 		Sleep(3000);
 		Screenshot();
@@ -333,11 +325,11 @@ driver.get(Saleforceurl);
 		
 		driver.findElement(By.xpath("//div[contains(text(),'Limited Company')]")).click();
 		
-		
 		//new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("comp_name"))).isDisplayed();
 			
 			//driver.findElement(By.id("comp_name")).sendKeys(CompanyName);
-		Sleep(5000);
+		
+		    Sleep(5000);
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'"+CompanyName+"')]"))).isDisplayed();
 			driver.findElement(By.xpath("//h3[contains(text(),'"+CompanyName+"')]")).click();
 			Sleep(5000);
@@ -350,7 +342,11 @@ driver.get(Saleforceurl);
 			//driver.findElement(By.xpath("//h3[contains(text(),'"+Director+"')]")).click();
 			
 	
-		//Sleep(800000);
+		     //Sleep(800000);
+			
+			 Sleep(2000);
+		      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+		      Sleep(2000);
 			
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']"))).isDisplayed();
 			driver.findElement(By.xpath("//input[@id='email']")).clear();
@@ -364,6 +360,11 @@ driver.get(Saleforceurl);
 		
 		newproposalpage.EnterPhoneNumberField(PhoneNumber);
 		newproposalpage.EnterBirthDay(BirthDay);
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+	      Sleep(2000);
+	      
 		newproposalpage.EnterAddressManually();
 		newproposalpage.EnterHouseNumber(HouseNumber);
 		newproposalpage.EnterHouseName(HouseName);
@@ -379,9 +380,11 @@ driver.get(Saleforceurl);
 		WriteExtentReport =test1.createNode("Navigate to Enter Company Detail Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
       
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+	      Sleep(2000);
+	      
 		newproposalpage.NextButton();
-		
-		
 		
 	
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Nucleus Business Loan')]"))).isDisplayed();
@@ -405,6 +408,11 @@ driver.get(Saleforceurl);
 		LoanInfo.FundingNeeded(Fund);
 		LoanInfo.LoanMonths(Months);
 		LoanInfo.SelectPurposeFunding();
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+	      Sleep(2000);
+		
 		LoanInfo.BrokerPercent(Percent);
 		}
 		catch(Exception e) {
@@ -432,6 +440,11 @@ driver.get(Saleforceurl);
 				LoanInfo.FundingNeeded(Fund);
 				LoanInfo.LoanMonths(Months);
 				LoanInfo.SelectPurposeFunding();
+				
+				Sleep(2000);
+			      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+			      Sleep(2000);
+				
 				LoanInfo.BrokerPercent(Percent);
 			   
 		}
@@ -460,6 +473,9 @@ driver.get(Saleforceurl);
 				LoanInfo.LoanMonths(Months);
 				LoanInfo.SelectPurposeFunding();
 			
+				Sleep(2000);
+			      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+			      Sleep(2000);
 			
 			}
 			catch(Exception e2) {
@@ -498,6 +514,9 @@ driver.get(Saleforceurl);
 							LoanInfo.LoanMonths(Months);
 							LoanInfo.SelectPurposeFunding();
 							
+							Sleep(2000);
+						      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+						      Sleep(2000);
 						
 							
 							
@@ -528,6 +547,10 @@ driver.get(Saleforceurl);
 							LoanInfo.FundingNeeded(Fund);
 							LoanInfo.LoanMonths(Months);
 							LoanInfo.SelectPurposeFunding();
+							
+							Sleep(2000);
+						      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+						      Sleep(2000);
 				}	
 			}
 				
@@ -552,6 +575,18 @@ driver.get(Saleforceurl);
 		try {
 			DirectorInformation.EditDirectorDetails();
 			DirectorInformation.DateofBirth(BirthDay1);
+			
+			driver.findElement(By.xpath("//input[@id='month']")).clear();
+			
+			
+			driver.findElement(By.xpath("//input[@id='month']")).sendKeys("5");
+			
+			driver.findElement(By.xpath("//input[@id='year']")).clear();
+			
+			driver.findElement(By.xpath("//input[@id='year']")).sendKeys("1998");
+			
+			
+			
 			Sleep(1000);
 			DirectorInformation.Email(Email1);
 			System.out.println("email enter 2");
@@ -577,6 +612,7 @@ driver.get(Saleforceurl);
 		try{
 			//	WebDriverWait wait=new WebDriverWait(driver, 20);
 				
+			
 				
 				new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("edit_3"))).isDisplayed();
 				Sleep(5000);
@@ -585,7 +621,17 @@ driver.get(Saleforceurl);
 				//DirectorInformation.EditShareholderDetails1();
 				Sleep(5000);
 				System.out.println("555555555555555555555555555555555555555555");
-				//DirectorInformation.DateofBirth(BirthDay1);
+				DirectorInformation.DateofBirth(BirthDay1);
+				
+				driver.findElement(By.xpath("//input[@id='month']")).clear();
+				
+				
+				driver.findElement(By.xpath("//input[@id='month']")).sendKeys("5");
+				
+				driver.findElement(By.xpath("//input[@id='year']")).clear();
+				
+				driver.findElement(By.xpath("//input[@id='year']")).sendKeys("1998");
+				
 				DirectorInformation.Email(Email2);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber1);
@@ -608,9 +654,29 @@ driver.get(Saleforceurl);
 	        }
 		
 		
+		
 		try {
 			DirectorInformation.EditShareholderDetails();
-			//DirectorInformation.DateofBirth(BirthDay1);
+			
+			
+			 driver.findElement(By.xpath("//input[@id='day']")).clear();
+				
+				
+				driver.findElement(By.xpath("//input[@id='day']")).sendKeys("5");
+				
+			
+			
+			
+			
+             driver.findElement(By.xpath("//input[@id='month']")).clear();
+			
+			
+			driver.findElement(By.xpath("//input[@id='month']")).sendKeys("5");
+			
+			driver.findElement(By.xpath("//input[@id='year']")).clear();
+			
+			driver.findElement(By.xpath("//input[@id='year']")).sendKeys("1998");
+			
 			DirectorInformation.Email(Email3);
 			Sleep(1000);
 			DirectorInformation.DirMobile(MobileNumber2);
@@ -634,7 +700,16 @@ driver.get(Saleforceurl);
 				
 				try {
 				DirectorInformation.ClickOnShareholderDetails2();
-				//DirectorInformation.DateofBirth(BirthDay1);
+				
+				   driver.findElement(By.xpath("//input[@id='month']")).clear();
+					
+					
+					driver.findElement(By.xpath("//input[@id='month']")).sendKeys("5");
+					
+					driver.findElement(By.xpath("//input[@id='year']")).clear();
+					
+					driver.findElement(By.xpath("//input[@id='year']")).sendKeys("1998");
+					
 				DirectorInformation.Email(Email4);
 				Sleep(1000);
 				DirectorInformation.DirMobile(MobileNumber3);
@@ -654,13 +729,14 @@ driver.get(Saleforceurl);
 		        {  
 		            System.out.println(e);  
 		        }
-			
-		
 				Sleep(3000);
 				Screenshot();
 				WriteExtentReport =test1.createNode("Navigate to Shareholder Details page 2");
 				WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 		      
+				Sleep(2000);
+			      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+			      Sleep(2000);
 		
 		DirectorInformation.ClickOnNext();
 		
@@ -679,15 +755,29 @@ driver.get(Saleforceurl);
 		Documents.ClickOnOk();
 		Documents.SelectBank(Bank);
 		Documents.SelectBankAccountType(BankType);
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,500)");
+	      Sleep(2000);
+	      
+	      
+		
+		
 		Sleep(3000);
 		Documents.ClickOnDirector1();
 		System.out.println("11111111111111111111");
 		Sleep(3000);
 		Documents.ClickOnOk();
-		Sleep(3000);
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,2000)");
+	      Sleep(2000);
+	   
 		Screenshot();
 		WriteExtentReport =test1.createNode("Navigate to Documents Detail Page1");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+		
+		
       
 		System.out.println("11111111111111111111");
 		Documents.SubmitButton();
@@ -813,7 +903,6 @@ driver.get(Saleforceurl);
 		String Months = (String) data.get(17);
 		String Percent = (String) data.get(18);
 		
-		
 		String BirthDay1= (String) data.get(19);
 		String Email1 = (String) data.get(20);
 		String MobileNumber = (String) data.get(21);
@@ -827,6 +916,7 @@ driver.get(Saleforceurl);
 		String Email4 = (String) data.get(29);
 		String MobileNumber3 = (String) data.get(30);
 		String CRN = (String) data.get(31);
+		
 		//System.out.println(Percent);
 		/*String BirthDay1= (String) data.get(18);
 		String Email1 = (String) data.get(19);
@@ -836,6 +926,8 @@ driver.get(Saleforceurl);
 		String Bank = (String) data.get(23);
 		String BankType = (String) data.get(24);
 		String Name = (String) data.get(29);*/
+		
+		
 		String Saleforceurl = (String) data.get(32);
 		String SaleforceUsername = (String) data.get(33);
 		String SaleforcePassword = (String) data.get(34);
@@ -898,6 +990,8 @@ driver.get(Saleforceurl);
 		NucleusSaleforce.SelectLeadSource();
 		NucleusSaleforce.SelectLeadSourceInformation();
 		NucleusSaleforce.EnterCompanyName(CompanyName);
+		Sleep(3000);
+		//driver.findElement(By.xpath("//input[@id='lea21']")).click();
 		NucleusSaleforce.ClickOnSavebutton();
 		
 		Sleep(3000);
@@ -1551,11 +1645,9 @@ driver.get(Saleforceurl);
 		WriteExtentReport =test1.createNode("Navigate to NEW PROPOSAL page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
       
-		
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='Infinity_lead']"))).isDisplayed();
 		
 		driver.findElement(By.xpath("//input[@id='Infinity_lead']")).sendKeys(CompanyName);
-		
 		
         new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'"+CompanyName+"')]"))).isDisplayed();
 		
@@ -1564,7 +1656,6 @@ driver.get(Saleforceurl);
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(text(),'Limited Company')]"))).isDisplayed();
 		
 		driver.findElement(By.xpath("//div[contains(text(),'Limited Company')]")).click();
-		
 		
 		//new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("comp_name"))).isDisplayed();
 			
@@ -18719,9 +18810,7 @@ driver.get(Saleforceurl);
 		try {
 				
 		ArrayList data=d.getData("TestCase31", path);
-		
 		System.out.println(path);
-		
 		String url = (String) data.get(2);
 		driver.get(url);
 		String Username= (String) data.get(3);
@@ -18786,8 +18875,7 @@ driver.get(Saleforceurl);
 		Screenshot();
 		WriteExtentReport =test1.createNode("Navigate to Saleforce After Login Page");
 		WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
-      
-		
+   
 		try {
 		Sleep(5000);
 		
@@ -18890,15 +18978,11 @@ driver.get(Saleforceurl);
 			
 			//new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//h3[contains(text(),'"+Director+"')]"))).isDisplayed();
 			//driver.findElement(By.xpath("//h3[contains(text(),'"+Director+"')]")).click();
-			
-	
-		//Sleep(800000);
+		    //Sleep(800000);
 			
 			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='email']"))).isDisplayed();
 			driver.findElement(By.xpath("//input[@id='email']")).clear();
 			
-			
-		
 		newproposalpage.EnterEmail(Email);
 		System.out.println("email enter 1");
 		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='phone']"))).isDisplayed();

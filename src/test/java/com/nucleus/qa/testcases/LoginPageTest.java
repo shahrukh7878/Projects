@@ -1,61 +1,41 @@
 package com.nucleus.qa.testcases;
 
-import static io.restassured.RestAssured.given;
-
-import java.awt.AWTException;
-import java.awt.HeadlessException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import java.util.regex.Pattern;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFRow;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.ITestResult;
+import org.sikuli.script.Screen;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.nucleus.qa.base.Api;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.infinity.qa.pages.InfinityHomePage;
+import com.infinity.qa.pages.InfinityLoginPage;
+import com.infinity.qa.pages.InfinityNewProposalPage;
 import com.nucleus.qa.base.TestBase;
 import com.nucleus.qa.pages.DirectorInformationPage;
 import com.nucleus.qa.pages.DocumentsPage;
@@ -68,25 +48,6 @@ import com.nucleus.qa.pages.OfficePage;
 import com.nucleus.qa.pages.ShareholderDetailsPage;
 import com.nucleus.qa.pages.myPulsePage;
 import com.nucleus.qa.util.TestUtil;
-
-import io.restassured.response.Response;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.infinity.qa.pages.InfinityHomePage;
-import com.infinity.qa.pages.InfinityLoginPage;
-import com.infinity.qa.pages.InfinityNewProposalPage;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 
 
 
@@ -119,7 +80,6 @@ public class LoginPageTest extends TestBase {
 	InfinityHomePage  InfinityHome;
 	InfinityNewProposalPage InfinityNewProposal;	
 	datadriven d;
-	
 	
 	
 	
@@ -333,6 +293,261 @@ public class LoginPageTest extends TestBase {
 		String BankType = (String) data.get(24);
 		String Name = (String) data.get(29);
 		
+		
+		/*driver.get("https://nucleus--qa.sandbox.my.salesforce.com/");
+		
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("shahrukh.aatar@mypulse.io.qa.qa");
+		
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Quality@123");
+		
+		driver.findElement(By.xpath("//input[@id='Login']")).click();
+		
+		/*try {
+			Sleep(5000);
+			
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			// new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='User']"))).isDisplayed();
+				
+			 
+			WebElement element = driver.findElement(By.xpath("//img[@alt='User']"));
+			 
+			 js.executeScript("arguments[0].click();", element);
+			
+				//driver.findElement(By.xpath("//img[@alt='User']")).click();
+			
+			
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]"))).isDisplayed();
+			driver.findElement(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]")).click();
+			
+			//NucleusSaleforce.ClickOnProfile();
+			//NucleusSaleforce.SwitchToClassic();
+			}
+			catch(Exception e)
+			{
+
+
+			}*/
+		
+		
+		/*driver.findElement(By.xpath("//input[@id='phSearchInput']")).sendKeys(CompanyName);
+				Sleep(5000);
+		driver.findElement(By.xpath("//input[@id='phSearchButton']")).click();
+		Sleep(5000);
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'"+CompanyName+"')]"))).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(text(),'"+CompanyName+"')]")).click();
+		
+		
+		
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Contacts')])[1]"))).isDisplayed();
+		
+		
+		WebElement clickable = driver.findElement(By.xpath("(//span[contains(text(),'Contacts')])[1]"));
+        new Actions(driver)
+                .clickAndHold(clickable)
+                .perform();
+		
+        Sleep(3000);
+        driver.switchTo().frame("RLPanelFrame");
+        
+        
+        
+        System.out.println("111111111111111111111111111111");
+		//driver.findElement(By.id("00QPt00000DRcEb_00N5800000DVdIG_link")).click();
+		
+		
+      // new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])"))).isDisplayed();
+		
+		//driver.findElement(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])")).click();
+		
+		
+		 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[3]"))).isDisplayed();
+			
+			driver.findElement(By.xpath("(//a[@target='_parent'])[3]")).click();
+			//Select drpCountry = new Select(driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']")));
+		
+			Sleep(5000);
+			
+			
+			Object[] windowHandles=driver.getWindowHandles().toArray();
+	        driver.switchTo().window((String) windowHandles[0]);
+	        
+			
+			Sleep(5000);
+			//driver.findElement(By.xpath("//h2[contains(text(),'Sinead Ro-anne Hunter- Caprice')]")).click();
+		
+			//driver.findElement(By.xpath("//label[contains(text(),'Email Risk level')]")).click();
+			 
+			WebElement element = driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", element);
+			
+			// new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@tabindex='26']"))).isDisplayed();	
+		     //driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']")).click();
+		 
+		     Sleep(3000);
+		     driver.findElement(By.xpath("//option[contains(text(),'Low')]")).click();
+			 
+		
+		//Select sc = new Select(driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']")));
+		
+		//sc.selectByVisibleText("Low");
+		
+			
+		 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value=' Save ']"))).isDisplayed();
+			
+			driver.findElement(By.xpath("//input[@value=' Save ']")).click();
+		
+			// new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(text(),'Financial Data')])[1]"))).isDisplayed();
+				
+				//driver.findElement(By.xpath("(//span[contains(text(),'Financial Data')])[1]")).click();
+			
+			
+			///2nd customer finacial account name update
+			
+				WebElement clickable1 = driver.findElement(By.xpath("((//span[contains(text(),'Financial Data')])//parent::a)//child::span//child::span"));
+		        new Actions(driver)
+		                .clickAndHold(clickable1)
+		                .perform();
+		
+		        
+		        Sleep(3000);
+		        driver.switchTo().frame("RLPanelFrame");
+		
+		        
+		        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[3]"))).isDisplayed();
+				
+				driver.findElement(By.xpath("(//a[@target='_parent'])[3]")).click();
+			
+		        
+				Sleep(5000);
+				
+				
+				Object[] windowHandles1=driver.getWindowHandles().toArray();
+		        driver.switchTo().window((String) windowHandles1[0]);
+		        
+		        
+		        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='00N5800000Dk2vB']"))).isDisplayed();
+				
+				driver.findElement(By.xpath("//input[@id='00N5800000Dk2vB']")).clear();
+			
+				driver.findElement(By.xpath("//input[@id='00N5800000Dk2vB']")).sendKeys(CompanyName);				
+				
+		System.out.println("HIT & CO LIMITED");
+		
+
+		
+				
+				 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value=' Save ']"))).isDisplayed();
+				driver.findElement(By.xpath("//input[@value=' Save ']")).click();				
+				
+				
+				///2nd customer finacial account name update
+				WebElement clickable2 = driver.findElement(By.xpath("((//span[contains(text(),'Financial Data')])//parent::a)//child::span//child::span"));
+		        new Actions(driver)
+		                .clickAndHold(clickable2)
+		                .perform();
+
+		        
+		        Sleep(3000);
+		        driver.switchTo().frame("RLPanelFrame");
+
+		        
+		        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[6]"))).isDisplayed();
+				
+				driver.findElement(By.xpath("(//a[@target='_parent'])[6]")).click();
+			
+		        
+				Sleep(5000);
+				
+				
+				Object[] windowHandles4=driver.getWindowHandles().toArray();
+		        driver.switchTo().window((String) windowHandles4[0]);
+		        
+		        
+		        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='00N5800000Dk2vB']"))).isDisplayed();
+				
+				driver.findElement(By.xpath("//input[@id='00N5800000Dk2vB']")).clear();
+			
+				driver.findElement(By.xpath("//input[@id='00N5800000Dk2vB']")).sendKeys(CompanyName);				
+				
+				
+				
+				
+				
+						
+						 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value=' Save ']"))).isDisplayed();
+						driver.findElement(By.xpath("//input[@value=' Save ']")).click();				
+			
+				
+				
+				
+				
+				
+				WebElement clickable3 = driver.findElement(By.xpath("(//span[contains(text(),'Contacts')])[1]//child::span"));
+		        new Actions(driver)
+		                .clickAndHold(clickable3)
+		                .perform();
+		        
+		        Sleep(3000);
+		        driver.switchTo().frame("RLPanelFrame");
+		        System.out.println("777777777777777");
+				
+				 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[5]"))).isDisplayed();
+					driver.findElement(By.xpath("(//a[@target='_parent'])[5]")).click();				
+					System.out.println("777777777777777");
+					Object[] windowHandles2=driver.getWindowHandles().toArray();
+			        driver.switchTo().window((String) windowHandles2[0]);
+			        System.out.println("777777777777777");
+			        
+			        new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Click Here')]"))).isDisplayed();
+					driver.findElement(By.xpath("//a[contains(text(),'Click Here')]")).click();				
+					System.out.println("777777777777777");
+					
+					
+					Object[] windowHandles3=driver.getWindowHandles().toArray();
+			        driver.switchTo().window((String) windowHandles3[0]);
+			        
+			        
+			        Set<String> handles4 = driver.getWindowHandles();
+					List<String> hList4 = new ArrayList<String>(handles4);
+					if(switchToRightWindow("MyNucleus",hList4)){
+					      }
+					
+					//https://myfunding.ncf-sandbox.com/mynucleus/003Pt00000H45Jx/crt
+			        
+						
+						
+					String text = driver.getCurrentUrl();
+					
+					
+					System.out.println(text);
+					
+                    System.out.println("inininin");
+                    
+                    
+                    
+                    Thread.sleep(6000);
+				/*	new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(text(),'Choose File')]"))).isDisplayed();
+					driver.findElement(By.xpath("//label[contains(text(),'Choose File')]")).click();*/				
+					/* System.out.println("out out");
+					
+					 WebElement element1 = driver.findElement(By.xpath("//label[contains(text(),'Choose File')]"));
+						JavascriptExecutor executor1 = (JavascriptExecutor)driver;
+						executor1.executeScript("arguments[0].click();", element1);
+						
+						
+						
+						String filepath = "D:\\Guru99Demo\\Files\\";
+				        String inputFilePath = "D:\\Guru99Demo\\Files\\";
+				        Screen s = new Screen();
+				        //Pattern fileInputTextBox = new Pattern(filepath + "FileTextBox.PNG");
+				        //Pattern openButton = new Pattern(filepath + "OpenButton.PNG", 0);
+						
+				      //  s.click(openButton);
+
+					 //WebDriver driver = getWebDriver();
+				    
+					System.out.println("777777777777777");*/
 	
        /* driver.get("https://myfunding.ncf-sandbox.com/deleteCompanyData/01554169");
 	
@@ -410,6 +625,8 @@ public class LoginPageTest extends TestBase {
 		catch(Exception e) {
 			
 		}*/
+		
+		
 
 		driver.get(url);
 		
@@ -429,6 +646,11 @@ public class LoginPageTest extends TestBase {
 		newproposalpage.SearchCompanyName(CompanyName);
 		newproposalpage.CompanyName(Name);
 		newproposalpage.PrimaryDirector();
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,500)");
+	      Sleep(2000);
+		
 		newproposalpage.EnterEmail(Email);
 		System.out.println("email enter 1");
 		newproposalpage.EnterPhoneNumberField(PhoneNumber);
@@ -439,9 +661,19 @@ public class LoginPageTest extends TestBase {
 		newproposalpage.EnterCity(City);
 		newproposalpage.EnterStreet(Street);
 		newproposalpage.EnterCountry(Country);
+		
+		
 		newproposalpage.SendPostCode(PostCode);
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+	      Sleep(3000);
 		newproposalpage.SelectResidentialPropertyYes();
 		newproposalpage.BusinessAddressSelectYes();
+		
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,1000)");
+	      Sleep(3000);
+		
 		newproposalpage.NextButton();
 		Screenshot(); 
 		WriteExtentReport =test1.createNode("Navigate Loan Information Page ");
@@ -451,6 +683,10 @@ public class LoginPageTest extends TestBase {
 		LoanInfo.FundingNeeded(Fund);
 		LoanInfo.LoanMonths(Months);
 		LoanInfo.SelectPurposeFunding();
+		Sleep(2000);
+	      ((JavascriptExecutor)driver).executeScript("scroll(0,500)");
+	      Sleep(3000);
+		
 		LoanInfo.BrokerPercent(Percent);
 		LoanInfo.NextStep();
 		Screenshot();
@@ -564,6 +800,13 @@ public class LoginPageTest extends TestBase {
 			Sleep(2000);
 			WriteExtentReport =test1.createNode("Navigate Congratulations Page ");
 			WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
+			
+			
+						//System.out.println(text);
+
+			
+			
+			
 	   }
 	catch(Exception e) {
 		String Error = e.toString();
@@ -574,7 +817,7 @@ public class LoginPageTest extends TestBase {
 	  }
 	}
 	
-	@Test (enabled=false)
+	@Test (enabled=true)
 	public void TestCase2() throws Exception {
 		 test1 = extent.createTest("Test Case2", "Single Dir OB AS");
 		try {
@@ -671,6 +914,73 @@ public class LoginPageTest extends TestBase {
 			
 		}*/
 		
+		
+		
+		driver.get("https://nucleus--qa.sandbox.my.salesforce.com/");
+		
+		driver.findElement(By.xpath("//input[@id='username']")).sendKeys("shahrukh.aatar@mypulse.io.qa.qa");
+		
+		driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Quality@123");
+		
+		driver.findElement(By.xpath("//input[@id='Login']")).click();
+		
+		
+		try {
+			Sleep(5000);
+			
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			// new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='User']"))).isDisplayed();
+				
+			 
+			WebElement element = driver.findElement(By.xpath("//img[@alt='User']"));
+			 
+			 js.executeScript("arguments[0].click();", element);
+			
+				//driver.findElement(By.xpath("//img[@alt='User']")).click();
+			
+			
+			new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]"))).isDisplayed();
+			driver.findElement(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]")).click();
+			
+			//NucleusSaleforce.ClickOnProfile();
+			//NucleusSaleforce.SwitchToClassic();
+			}
+			catch(Exception e)
+			{
+
+			}
+		
+		
+		driver.findElement(By.xpath("//input[@id='phSearchInput']")).sendKeys(CompanyName);
+		System.out.println("click on serch222222222222222222222222222");
+		Sleep(5000);
+		driver.findElement(By.xpath("//input[@id='phSearchButton']")).click();
+		Sleep(5000);
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'DIAMOND GIZA LTD')]"))).isDisplayed();
+		driver.findElement(By.xpath("//a[contains(text(),'DIAMOND GIZA LTD')]")).click();
+		
+		
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("00QPt00000DRcEb_00N5800000DVdIG_link"))).isDisplayed();
+		
+		driver.findElement(By.id("00QPt00000DRcEb_00N5800000DVdIG_link")).click();
+		
+		
+      // new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])"))).isDisplayed();
+		
+		//driver.findElement(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])")).click();
+		
+		
+		 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[3]"))).isDisplayed();
+			
+			driver.findElement(By.xpath("(//a[@target='_parent'])[3]")).click();
+			
+		
+			WebElement Element = driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']"));
+		
+		Select sc = new Select(Element);
+		
+		sc.deselectByValue("Low");
+		
 		driver.get(url);
 		
 		Screenshot();
@@ -710,7 +1020,6 @@ public class LoginPageTest extends TestBase {
 		driver.findElement(By.id("rbl")).click();
 		Sleep(1000);
 		LoanInfo.ConfirmAlert();
-		
 		driver.findElement(By.id("card_terminals")).sendKeys("5");
 		Sleep(1000);
 		driver.findElement(By.id("average_monthly_card_volume")).sendKeys("4000");
@@ -834,7 +1143,85 @@ public class LoginPageTest extends TestBase {
 				WriteExtentReport =test1.createNode("Navigate  Page ");
 				WriteExtentReport.log(Status.PASS, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+"pass");
 			 myPulse.ClickOnFinish();	
-			Sleep(2000);    
+			Sleep(2000); 
+			
+			
+			
+			
+			//driver.get("https://myfunding.ncf-sandbox.com/deleteCompanyData/12225716");
+			 
+			/*driver.get("https://nucleus--qa.sandbox.my.salesforce.com/");
+			
+			driver.findElement(By.xpath("//input[@id='username']")).sendKeys("shahrukh.aatar@mypulse.io.qa.qa");
+			
+			driver.findElement(By.xpath("//input[@id='password']")).sendKeys("Quality@123");
+			
+			driver.findElement(By.xpath("//input[@id='Login']")).click();
+			
+			
+			try {
+				Sleep(5000);
+				
+				 JavascriptExecutor js = (JavascriptExecutor) driver;
+				// new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='User']"))).isDisplayed();
+					
+				 
+				WebElement element = driver.findElement(By.xpath("//img[@alt='User']"));
+				 
+				 js.executeScript("arguments[0].click();", element);
+				
+					//driver.findElement(By.xpath("//img[@alt='User']")).click();
+				
+				
+				new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]"))).isDisplayed();
+				driver.findElement(By.xpath("//a[contains(text(),'Switch to Salesforce Classic')]")).click();
+				
+				//NucleusSaleforce.ClickOnProfile();
+				//NucleusSaleforce.SwitchToClassic();
+				}
+				catch(Exception e)
+				{
+
+				}
+			
+			
+			driver.findElement(By.xpath("//input[@id='phSearchInput']")).sendKeys(CompanyName);
+			System.out.println("click on serch222222222222222222222222222");
+			Sleep(5000);
+			driver.findElement(By.xpath("//input[@id='phSearchButton']")).click();
+			Sleep(5000);
+			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(text(),'DIAMOND GIZA LTD')]"))).isDisplayed();
+			driver.findElement(By.xpath("//a[contains(text(),'DIAMOND GIZA LTD')]")).click();
+			
+			
+			new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.id("00QPt00000DRcEb_00N5800000DVdIG_link"))).isDisplayed();
+			
+			driver.findElement(By.id("00QPt00000DRcEb_00N5800000DVdIG_link")).click();
+			
+			
+          // new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])"))).isDisplayed();
+			
+			//driver.findElement(By.xpath("(//a[contains(text(),'Sinead Ro-anne Hunter- Caprice')])")).click();
+			
+			
+			 new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@target='_parent'])[3]"))).isDisplayed();
+				
+				driver.findElement(By.xpath("(//a[@target='_parent'])[3]")).click();
+				
+			
+				WebElement Element = driver.findElement(By.xpath("//select[@id='00N4I00000ERiSM']"));
+			
+			Select sc = new Select(Element);
+			
+			sc.deselectByValue("Low");*/
+			
+			
+			//span[contains(text(),'Contacts')]
+			
+			
+			
+			
+			
 	}
 	
 	catch(Exception e) {
@@ -845,7 +1232,7 @@ public class LoginPageTest extends TestBase {
 		WriteExtentReport.log(Status.FAIL, WriteExtentReport.addScreenCaptureFromPath(sScreenshotFilePath)+Error);
 	 }	
 	}		
-		@Test(enabled=false)
+		@Test(enabled=true)
 	public void TestCase3() throws Exception {
 		 test1 = extent.createTest("Test Case 3", "Single Dir/Shareholder OB Plaid");
 		try {
@@ -1091,7 +1478,7 @@ public class LoginPageTest extends TestBase {
 	}
 
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void TestCase4() throws Exception  {
 		
 		
@@ -1282,7 +1669,7 @@ public class LoginPageTest extends TestBase {
 	}
 	}
 	
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void TestCase5() throws Exception  {
 		
 		

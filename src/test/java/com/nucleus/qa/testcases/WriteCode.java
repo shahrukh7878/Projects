@@ -9,13 +9,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class WriteCode {
-	public static void Write(String NucleusWebsite,String InfinityFundingWebsite, String MypulseWebsite, String MyNucleusPortalBroker, String MyNucleusPortalAdmin, String InfinityPortalDirectRoleBroker, String InfinityPortalTeleRoleBroker, String InfinityPortalDirectRoleAdmin, String InfinityPortalTeleRoleAdmin, String Mycollection, String MyReportingPortal, String MyAdminPortal    ) throws IOException {
+	public static void Write( String NucleusWebsite,String InfinityFundingWebsite, String MypulseWebsite, String MyNucleusPortalBroker, String MyNucleusPortalAdmin, String InfinityPortalDirectRoleBroker, String InfinityPortalTeleRoleBroker, String InfinityPortalDirectRoleAdmin, String InfinityPortalTeleRoleAdmin, String Mycollection, String MyReportingPortal, String MyAdminPortal    ) throws IOException {
 		
 		
 	
-        
+	//	
     	//Create an object of File class to open xlsx file
-        File file =    new File("C:\\Users\\ShahrukhAata_l4\\Project\\Test\\TestData\\TestData.xls");
+        File file =    new File("C://Users//ShahrukhAata_l4//Project//Test//TestData//TestData1.xls");
         
         //Create an object of FileInputStream class to read excel file
         FileInputStream inputStream = new FileInputStream(file);
@@ -24,13 +24,13 @@ public class WriteCode {
         HSSFWorkbook wb=new HSSFWorkbook(inputStream);
         
         //creating a Sheet object using the sheet Name
-        HSSFSheet sheet=wb.getSheet("Result");
+        
+        HSSFSheet sheet=wb.getSheet("Sheet");
         
         //Create a row object to retrieve row at index 3
         HSSFRow row2=sheet.createRow(1);
-        
-        
         //create a cell object to enter value in it using cell Index
+        
         row2.createCell(1).setCellValue(NucleusWebsite);
         row2.createCell(2).setCellValue(InfinityFundingWebsite);
         row2.createCell(3).setCellValue(MypulseWebsite);
@@ -43,9 +43,10 @@ public class WriteCode {
         row2.createCell(10).setCellValue(Mycollection);
         row2.createCell(11).setCellValue(MyReportingPortal);
         row2.createCell(12).setCellValue(MyAdminPortal);
-        FileOutputStream outputStream = new FileOutputStream("C:\\Users\\ShahrukhAata_l4\\Project\\Test\\TestData\\TestData.xls");
+        FileOutputStream outputStream = new FileOutputStream("C://Users//ShahrukhAata_l4//Project//Test//TestData//TestData1.xls");
         wb.write(outputStream);
         wb.close();
+        
 
     }
 }

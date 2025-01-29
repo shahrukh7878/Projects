@@ -73,9 +73,6 @@ public class Test {
 	{
 		String sRequest31= sheet1.getRow(i).getCell(0).getStringCellValue();
 		initialization("Api_01"+i);
-		
-		
-		
 		System.out.println(sRequest31);	
 	}
 	
@@ -83,6 +80,9 @@ public class Test {
 	wb.close();
 
 }
+	
+	
+	
 	
 	public static void initialization(String sTestCaseidval) {
 		String SPath = "C://Users//xaatars//Desktop//Shahrukh//TestData1.xlsx";

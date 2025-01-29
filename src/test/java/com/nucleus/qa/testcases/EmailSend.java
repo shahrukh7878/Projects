@@ -3,6 +3,7 @@ package com.nucleus.qa.testcases;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -32,22 +33,32 @@ import com.nucleus.qa.base.TestBase;
 	{
 		
 		static datadriven d;
-		public static Object sendEmailWithSqData(String messageToSend)
+		public static Object sendEmailWithSqData(String messageToSend) throws UnsupportedEncodingException
 		{
-			
 			LocalDateTime localDate = LocalDateTime.now().minusDays(0);
 			DateTimeFormatter customFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");
-			
 			String host = "smtpout.secureserver.net";
-
-			final String user = "integration@mypulse-sandbox.io";
+			
+			
+			String integration = "integration@mypulse-sandbox.io";
+			final String user = integration;
+			//final String user = "integration@mypulse-sandbox.io";
 			final String password = "Plom55AD!";
-
 			String to = "shahrukh.aatar@mypulse.io";
+			/*String CC = "qualityteam@mypulse.io";
+			String CC1 = "anil.jain@mypulse.io";
+			String CC2 = "satya.mariappal@mypulse.io";
+			
+			String CC3 = "raja.singareddy@mypulse.io";
+			String CC4 = "shahrukh.aatar@mypulse.io";
+			String CC5 = "rohit.murudkar@mypulse.io";*/
+			//String from = "integration";
+			
 			String to1 = "";
 			String to2 = "";
-			String cc = "";
+			String cc =  "";
 
+			
 			Properties props = new Properties();
 			props.put("mail.smtp.host", "true");
 			props.put("mail.smtp.starttls.enable", "true");
@@ -56,26 +67,39 @@ import com.nucleus.qa.base.TestBase;
 			props.put("mail.smtp.auth", "true");
 			props.put("mail.smtp.ssl.trust", host);
 			props.put("mail.smtp.ssl.protocols", "TLSv1.2");
-
 			Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+				
 				protected PasswordAuthentication getPasswordAuthentication()
 				{
 					return new PasswordAuthentication(user, password);
 				}
+				
+				
+				
 			});
-
 			try
 			{
-		
 				MimeMessage message = new MimeMessage(session);
+				//message.getFrom()
 				message.setFrom(new InternetAddress(user));
+				//message.addHeader(user, "integration");
+			   message.setFrom(new InternetAddress(user, "integration"));
+			    
+			   // message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to));
+				
 				message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-				//message.addRecipient(Message.RecipientType.TO,new
-			   //InternetAddress(to1));
-				// message.addRecipient(Message.RecipientType.TO,new
-				// InternetAddress(to2));
-				// message.addRecipient(Message.RecipientType.CC,new
-				// InternetAddress(cc));
+				/*message.addRecipient(Message.RecipientType.CC,new
+			    InternetAddress(CC));
+				 message.addRecipient(Message.RecipientType.CC,new
+				 InternetAddress(CC1));
+				message.addRecipient(Message.RecipientType.CC,new
+				 InternetAddress(CC2));
+				message.addRecipient(Message.RecipientType.CC,new
+						 InternetAddress(CC3));
+				message.addRecipient(Message.RecipientType.CC,new
+						 InternetAddress(CC4));
+				message.addRecipient(Message.RecipientType.CC,new
+						 InternetAddress(CC5));*/
 				message.setSubject("Core Systems Check : " + customFormat.format(localDate));
 				//message.setContent(null);
 				//message.setText("Hi Julius");
@@ -83,24 +107,21 @@ import com.nucleus.qa.base.TestBase;
 				message.setContent(messageToSend, "text/html");
 				// message.setText(messageToSend);
 				//message.setDescription(htmlContent);
-
 				Transport.send(message);
 				System.out.println("message sent successfully...");
-				
-				
-
 			}
 			catch(MessagingException e)
 			{
+				
 				System.out.println("Exception occured is :" + e);
+				
+				System.out.println("" +e);
 			}
 			return null;
 		}
 		
-		
 		public static void main(String[] args) throws InterruptedException, IOException
 		{
-			
 			LocalDateTime localDate = LocalDateTime.now().minusDays(0);
 			DateTimeFormatter customFormat = DateTimeFormatter.ofPattern("dd MMM yyyy");
 			
@@ -111,7 +132,8 @@ import com.nucleus.qa.base.TestBase;
 			//System.out.println(date.format(formatter));
 			String Date1=date.format(formatter);
 			
-						System.out.println("5555555555555555555");
+			
+		    System.out.println("5555555555555555555");
 			File file =    new File("C://Users//ShahrukhAata_l4//Project//Test//TestData//TestData.xls");
 			FileInputStream inputStream = new FileInputStream(file);
 			HSSFWorkbook wb=new HSSFWorkbook(inputStream);
@@ -133,6 +155,7 @@ import com.nucleus.qa.base.TestBase;
 	        HSSFCell cell11=row2.getCell(12);//MyAdminPortal
 	        
 	      
+	        
 	      //Get the address in a variable
 	        String NucleusWebsite= cell.getStringCellValue();
 	        String InfinityFundingWebsite= cell1.getStringCellValue();
@@ -147,13 +170,8 @@ import com.nucleus.qa.base.TestBase;
 	        String MyReportingPortal= cell10.getStringCellValue();
 	        String MyAdminPortal= cell11.getStringCellValue();
 			
-			
-		
-			
-			
 			StringBuilder htmlContent = new StringBuilder();
-			htmlContent.append("<!DOCTYPE html>\r\n"
-					+ "<html>\r\n"
+			htmlContent.append("<html>\r\n"
 					+ "<style>\r\n"
 					+ "table, th, td {\r\n"
 					+ " border: 1px solid black;\r\n"
@@ -163,39 +181,38 @@ import com.nucleus.qa.base.TestBase;
 					+ "<body>\r\n"
 					+ "\r\n"
 					+ "<p>Hi Julius,</p>\r\n"
-					+ "<p>Please find below the Core Systems Checks done for "+Date+".</p>\r\n"
+					+ "<p>Please find below the Core Systems Checks done for.</p>\r\n"
 					+ "\r\n"
 					+ "\r\n"
+					+ "<div style=\"width:100%;overflow-x:scroll\">\r\n"
+					+ "<table style=\"width:100%;text-align: center\" cellpadding=\"10\" cellspacing=\"10\">\r\n"
 					+ "\r\n"
-					+ "<table style=\"width:100%\">\r\n"
-					+ "<table style=\"text-align: center\"> \r\n"
+					+ "\r\n"
 					+ "\r\n"
 					+ "  <tr>\r\n"
-					+ "    <th style=\"width:5%\"  rowspan=\"2\">Date</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">NCF Website</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">Infinity Website</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">Pulse Website</th>\r\n"
-					+ "    <th style=\"width:5%\" colspan=\"2\">My Nucleus Portal</th>\r\n"
-					+ "    <th style=\"width:5%\" colspan=\"4\">My Funding Portal</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">MyFunding Portal - Reports</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">MyAdmin Portal - Reports</th>\r\n"
-					+ "    <th style=\"width:5%\" rowspan=\"2\">My collections Portal</th>\r\n"
+					+ "    <th style=\"width:5%; white-space: nowrap;\"  rowspan=\"2\">Date</th>\r\n"
+					+ "    <th style=\"width:7%; white-space: nowrap;\" rowspan=\"2\">NCF Website</th>\r\n"
+					+ "    <th style=\"width:8%; white-space: nowrap;\" rowspan=\"2\">Infinity Website</th>\r\n"
+					+ "    <th style=\"width:11%; white-space: nowrap;\" colspan=\"2\">My Nucleus Portal</th>\r\n"
+					+ "    <th style=\"width:13%; white-space: nowrap;\" colspan=\"4\">My Funding Portal</th>\r\n"
+					+ "    <th style=\"width:11%; white-space: nowrap;\" rowspan=\"2\">MyFunding Portal - Reports</th>\r\n"
+					+ "    <th style=\"width:11%; white-space: nowrap;\" rowspan=\"2\">MyAdmin Portal - Reports</th>\r\n"
+					+ "    <th style=\"width:11%; white-space: nowrap;\" rowspan=\"2\">My collections Portal</th>\r\n"
 					+ "\r\n"
 					+ "  </tr>\r\n"
 					+ "  <tr>\r\n"
 					+ "    <th style=\"width:5%\">Broker</th>\r\n"
 					+ "    <th style=\"width:5%\">Admin</th>\r\n"
-					+ "    <th style=\"width:5%\">Direct Role-Broker</th>\r\n"
-					+ "    <th style=\"width:5%\">Direct Role-Admin</th>\r\n"
-					+ "    <th style=\"width:5%\">Tele Role-Broker</th>\r\n"
-					+ "    <th style=\"width:5%\">Tele Role-Admin</th>\r\n"
+					+ "    <th style=\"width:10%; white-space: nowrap;\">Direct Role-Broker</th>\r\n"
+					+ "    <th style=\"width:10%; white-space: nowrap;\">Direct Role-Admin</th>\r\n"
+					+ "    <th style=\"width:9%; white-space: nowrap;\">Tele Role-Broker</th>\r\n"
+					+ "    <th style=\"width:9%; white-space: nowrap;\">Tele Role-Admin</th>\r\n"
 					+ "    \r\n"
-					+ "  </tr>\r\n"
+					+ "  </tr>"
 					+ "  <tr>\r\n"
 					+ "    <td>"+Date1+"</td>\r\n"
 					+ "    <td>"+NucleusWebsite+"</td>\r\n"
 					+ "    <td>"+InfinityFundingWebsite+"</td>\r\n"
-					+ "    <td>"+MypulseWebsite+"</td>\r\n"
 					+ "    <td>"+MyNucleusPortalBroker+"</td>\r\n"
 					+ "    <td>"+MyNucleusPortalAdmin+"</td>\r\n"
 					+ "    <td>"+InfinityPortalDirectRoleBroker+"</td>\r\n"
@@ -213,23 +230,12 @@ import com.nucleus.qa.base.TestBase;
 					+ "</html>\r\n"
 					+ "\r\n"
 					+ "");
-	    
-		
 			
-			
-			
-			String Content= htmlContent.toString();
-		
-			 
-					
+			                String Content= htmlContent.toString();
 							sendEmailWithSqData(Content);
-							
 							Thread.sleep(60000);
-							
 						}		
-					{
-					
-					
+					{	
 					//System.out.println(iHour);
 					//Thread.sleep(15000);
 					
